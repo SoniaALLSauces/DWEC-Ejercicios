@@ -1,0 +1,119 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 03/12/2020 -->
+<!-- Practica 11 - Objetos BOM -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 11 - Objetos BOM</title>
+		<script type="text/JavaScript" src="script1.js"></script>	
+		<!-- <link rel="stylesheet" href="css/estilo.css"> -->
+		<style>
+			table{border-collapse: collapse;
+				  margin: 25px;}
+			td{width: 80px; height: 50px;
+			   border: 2px solid black;}
+			article{position: relative;}
+			button{width: 300px; height: 40px;
+				   margin: 5px;
+				   border: 2px solid grey;
+				   border-radius: 10px;
+				   line-height: 37px;
+				   text-align: center;
+				   font-weight: bolder;
+				   font-size: .95rem;
+				   background-color: rgb(240,140,140);
+				   position: relative;
+				   left: 5px;}
+			p{position: absolute;
+			  top: -5px;
+			  left: 350px;} 
+			#repetidos{display: none;}
+			.continua{width: 300px; height: 40px;
+					  margin: 5px;
+					  border: 2px solid grey;
+					  border-radius: 10px;
+					  line-height: 37px;
+					  text-align: center;
+					  font-weight: bolder;
+					  font-size: .95rem;
+					  background-color: rgb(240,140,140);
+					  position: absolute;
+					  top: 0px;
+					  left: 5px;}
+			#disabled{width: 700px; height: 60px;
+					  position: absolute;
+					  top: 70px;
+					  left: 10px;
+					  background: white;
+					  opacity: 0.5}
+		</style>
+	</head>
+	<body id="body">
+		<header>
+			<h4>-- Sonia Antón Llanes --</h4>
+			<h2>DWEC - JavaScript T3. Utilización de Objetos Predefinidos</h2>
+			<h1>Práctica 11 - Objetos BOM</h1>
+		</header>
+		
+		<section class="ejercicios">
+			<article>
+				<h3>Pincha los distintos botones para jugar con colores</h3>
+				<h4>Pincha sobre cualquier celda y se pintará de un color aleatorio</h4>
+				<table>
+					<tr>
+						<td onclick="color(0)"></td>
+						<td onclick="color(1)"></td>
+						<td onclick="color(2)"></td>
+						<td onclick="color(3)"></td>
+					</tr>
+					<tr>
+						<td onclick="color(4)"></td>
+						<td onclick="color(5)"></td>
+						<td onclick="color(6)"></td>
+						<td onclick="color(7)"></td>
+					</tr>
+				</table>
+			</article>
+			<article>
+				<button onclick="pintarFila1()">Pinta la 1º Fila (sin repetir colores)</button>
+				<p id="repetidosFila1"></p>  <!-- Parrafo para indicar que celda tiene color repetido -->
+			</article>
+			<article>
+				<button onclick="pintarFila2()">Pinta la 2º Fila  (sin repetir colores)</button>
+				<p id="repetidosFila2"></p>  <!-- Parrafo para indicar que celda tiene color repetido -->
+			</article>
+			<article>
+				<button onclick="cambiarColor()">Cambia el color repetido</button>
+				<p id="pintalos"></p>  <!-- Parrafo para indicar cuando no estan todas las celdas pintadas, o ya están todas las celdas de colores distintos -->
+				<div id="repetidos">
+					<p id="repetido"></p>  <!-- Parrafo para indicar que celda tiene color repetido -->
+					<button class="continua" onclick="cambiarColor()">continuar</button>  <!-- Boton para continuar cambiando colores -->
+					<table id="paletaColores">
+						<tr>  <!-- Botones para elegir los distintos colores -->
+							<td onclick="numColor(1)" style="background: yellow;"></td>
+							<td onclick="numColor(2)" style="background: darkorange;"></td>
+							<td onclick="numColor(3)" style="background: hotpink;"></td>
+							<td onclick="numColor(4)" style="background: red;"></td>
+							<td onclick="numColor(5)" style="background: limegreen;"></td>
+							<td onclick="numColor(6)" style="background: darkturquoise;"></td>
+							<td onclick="numColor(7)" style="background: Mediumpurple;"></td>
+							<td onclick="numColor(8)" style="background: chocolate;"></td>
+						</tr>
+						<tr id="disabled"></tr>  <!-- Fila para tapar los botones de color cuando los quiero deshabilitar -->
+					</table>
+				</div>
+			</article>
+			<article>
+				<button onclick="pintaUsuario()">Pintar</button>
+				<p id="mensaje"></p>
+			</article>
+			<article>
+				<button onclick="recargar()">Recargar</button>
+			</article>
+		</section>
+	</body>
+</html>

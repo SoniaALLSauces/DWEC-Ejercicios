@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script>	
+			function Concesionario(cod_oficina_in, ciudad_in, responsable_in){
+				this.codigoOficina = cod_oficina_in;
+			 	this.ciudad = ciudad_in;
+			 	this.responsable = responsable_in;
+			}
+
+			function imprimirDatos(){
+				alert (this.marca);
+				alert (this.modelo);
+				alert (this.anyo);
+				alert (this.concesionario.codigoOficina);
+				alert (this.concesionario.ciudad);
+				alert (this.concesionario.responsable);
+				//más propiedades y métodos... 
+
+			}
+
+			function Coche(marca_in, modelo_in, anyo_in,concesionario_in){
+				this.marca = marca_in;
+			 	this.modelo = modelo_in;
+			 	this.anyo = anyo_in;
+			 	this.concesionario = concesionario_in;
+			 	this.imprimirDatos = imprimirDatos;
+			}
+			
+			var concesionarioAtocha = new Concesionario ("281", "Madrid", "Pedro Navarro");
+			var miCoche = new Coche ("Citroen", "C4", "2010", concesionarioAtocha);
+			miCoche.imprimirDatos();	
+
+		</script>
+
+	</head>
+	<body>
+		<p>Objetos: definición, propieadades y métodos</p>
+	</body>
+
+</html>

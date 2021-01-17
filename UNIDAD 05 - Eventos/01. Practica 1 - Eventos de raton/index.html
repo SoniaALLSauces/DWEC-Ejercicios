@@ -1,0 +1,103 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 13/01/2021 -->
+<!-- Practica 1 - Eventos de raton -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 1 - Eventos del raton</title>
+		<script type="text/JavaScript" src="script.js"></script>
+		<style>
+			h3,button{margin-left: 10px;}
+			p{margin-left: 20px;}
+			.posicionAbs{position: relative;
+						 margin-bottom: 250px;}
+			img{position: absolute;
+				width: 280px; height: 200px;
+				margin-left: 20px;}
+			#imagenOculta{display: none;}
+			.flex{display: inline-flex;
+				  flex-direction: row;}
+			.flex>section:first-child{margin-right: 120px;}
+			#cuadro{width: 350px; height: 195px;
+					margin-left: 30px;
+					border: 2px solid blue;}
+			td{width: 50px; height: 50px;
+			   border: 1px solid black;
+			   text-align: center;
+			   line-height: 50px;
+			   font-size: 2em;}
+			#coordenadas{width: 500px; height: 40px;
+					border: 1px solid black;
+					line-height: 40px;
+					text-align: center;
+					font-size: 1em;}
+		</style>
+	</head>
+	<body onmousemove="mueveRaton()">
+		<header>
+			<p>-- Sonia Antón Llanes --</p>
+			<h2>DWEC - JavaScript</h2>
+			<h2>Tema 5. Eventos</h2>
+		</header>
+		<section><h3>Ejercicio 1</h3>
+			<p onclick="cambiarTexto('p',1,'¡PULSADO!')">SI ME PULSAS CAMBIO EL TEXTO</p>
+		</section>
+		<section><h3>Ejercicio 2</h3>
+			<button onclick="cambiarTexto('p',2,'¡PULSADO!')">APARECE TEXTO ¡PULSADO!</button>
+			<p></p>
+		</section>
+		<section><h3>Ejercicio 3: Este texto cambia a rojo al pasar por encima el raton</h3>
+			<p onmouseover="this.style.color='red'">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+		</section>
+		<section class="flex">
+			<section><h3>Ejercicio 4: Cambia Imagen</h3>
+				<article class="posicionAbs" onmouseover="aparece()" onmouseout="desaparece()">
+					<img src="images/ImagenColor.jpg" alt="ImagenDeColor" >
+					<img id="imagenOculta" src="images/VisionColor.jpg" alt="VisionDelColor">
+				</article>
+			</section>
+			<section><h3>Ejercicio 5: Segundos dentro del cuadro</h3>
+				<article id="cuadro" onmouseover="startTemporizador()" onmouseout="stopTemporizador()"><p id="muestraSg"></p></article>
+			</section>
+		</section>
+		<section><h3>Ejercicio 6: Celdas cambian de color al pasar por encima</h3>
+			<table>
+				<tr>
+					<td onmouseover="cambiaColor(0)"></td>
+					<td onmouseover="cambiaColor(1)"></td>
+				</tr>
+				<tr>
+					<td onmouseover="cambiaColor(2)"></td>
+					<td onmouseover="cambiaColor(3)"></td>
+				</tr>
+			</table>
+		</section>
+		<section><h3>Ejercicio 7: ABECEDARIO</h3>
+			<table>
+				<tr>
+					<td id="letra" onmouseover="avanzaLetra()" onmouseout="letraA()">A</td>
+				</tr>
+			</table>
+		</section>
+		<section><h3>Ejercicio 8: Coordenadas del raton</h3>
+			<article id="coordenadas"></td>
+		</section>
+		<section><h3>Ejercicio 9: Dentro color & Fuera Ok</h3>
+			<table>
+				<tr>
+					<td class="" onmouseover="cambiaColor(5)" onmouseout="colorOk(5)"></td>
+					<td onmouseover="cambiaColor(6)" onmouseout="colorOk(6)"></td>
+				</tr>
+				<tr>
+					<td onmouseover="cambiaColor(7)" onmouseout="colorOk(7)"></td>
+					<td onmouseover="cambiaColor(8)" onmouseout="colorOk(8)"></td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</html>

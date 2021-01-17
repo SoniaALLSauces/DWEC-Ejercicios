@@ -1,0 +1,32 @@
+/* Sonia Anton Llanes */
+/* Fecha: 30/11/2020 */
+/* Practica 08 - Document 2 */
+
+
+.ejercicios{
+	margin: 10px 20px;
+}
+.ejercicios>h3, .documento>h3{
+	text-decoration: underline;
+}
+.ejercicios button{
+	margin: 5px;
+	border: 2px solid grey;
+	border-radius: 10px;
+	width: 280px; height: 45px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: bolder;
+	font-size: .95rem;
+	background-color: rgb(240,140,140); 
+}
+
+.index{
+	border: 1px solid #BF2411;
+    margin: 3%;
+    padding: 0 3% 3% 3%;
+}
+
+.masImg>img{
+	display: block;
+}

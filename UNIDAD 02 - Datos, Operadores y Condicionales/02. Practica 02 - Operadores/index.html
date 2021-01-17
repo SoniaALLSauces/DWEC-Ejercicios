@@ -1,0 +1,67 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 30/09/2020 -->
+
+
+<html lang="es">
+	<head>
+		<title>Practica 2 - Operadores</title>
+		<script type="text/JavaScript">
+		
+	/*1. Crea un script que permita visualizar por pantalla la siguiente operación matemática:
+	(34 + 5)*3/2 y además muestre el resultado. Utliza alert();*/
+		alert((34+5)*3/2);
+		
+	/*2. Crea un script que permita comprobar si un número que introduce un usuario es par
+	o no.*/
+		var x= parseInt(prompt ("Introduce un numero: "));
+		((x%2)==0) ? alert("Es un numero par") : alert("NO es un numero par");
+		
+	/*3. Pídele al usuario un número, súmale 5 e increméntale 1 al resultado. Muéstralo.*/
+		var x= parseInt(prompt("Introduce un numero"));
+		x=x+5;
+		x++
+		alert(x);
+		
+	/*4. Pídele al usuario que introduzca un número y muestra por pantalla ese número
+	decrementado en 1.*/
+		var x= parseInt(prompt("Introduce un numero"));
+		x--
+		alert(x);
+	
+	/*5. Pide al usuario su edad y si es mayor de edad que aparezca por pantalla “Eres mayor
+	de edad” y si no lo es, “Eres menor de edad”. */
+		var x= parseInt(prompt("Introduce tu edad"));
+		(x<18) ? alert("Eres menor de edad") : alert("Eres mayor de edad");
+		
+	/*6. Pide al usuario dos números y comprueba si esos dos números son iguales con un
+	operador. Si son iguales muestra por pantalla, son iguales, sino lo son, muestra por
+	pantalla “son distintos”*/
+		var x= parseInt(prompt("Introduce un numero"));
+		var y= parseInt(prompt("Introduce otro numero"));
+		(x==y) ? alert("Los numeros son iguales") : alert("Los numeros son distintos");
+		
+	/*7. Pide al usuario un número y almacénalo en una variable, pídelo otro número y suma
+	éste número al primero que has pedido. Muestra por pantalla la suma de ambos
+	números.*/
+		var x= parseInt(prompt("Introduce un numero"));
+		var y= parseInt(prompt("Introduce otro numero"));
+		y=y+x;
+		alert(x+y);
+		
+	/*8. Crea tres variables A=0, B=1 y C=0 y haz un script que muestro por pantalla true o
+	false teniendo en cuenta el resultado de los valores lógicos
+	a. (A AND B) es igual a (A AND C)
+	b. (A OR B) es distinto a (A AND C)*/
+		var A=0;
+		var B=1;
+		var C=0;
+		alert((A&B)==(A&C));
+		alert((A|B)!=(A&C));
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

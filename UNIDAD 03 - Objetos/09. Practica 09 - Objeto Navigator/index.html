@@ -1,0 +1,86 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 01/12/2020 -->
+<!-- Practica 09 - Navigator -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 09 - Navigator</title>
+		<script type="text/JavaScript" src="script.js"></script>	
+		<!-- <link rel="stylesheet" href="css/estilo.css"> -->
+	</head>
+	<body>
+		<header>
+			<p>-- Sonia Antón Llanes --</p>
+			<h2>DWEC - JavaScript T3. Utilización de Objetos Predefinidos</h2>
+			<h2>Práctica 9. Navigator</h2>
+		</header>
+		
+		<section class="ejercicios">
+			<h3>Ejercicios con las propiedades y los métodos de Navigator</h3>
+			<h4>Según el navegador con el que despleguemos este index</h4>
+			<article>
+				<h4>Propiedades</h4>
+				<button onclick="codigoNavegador()">appCodeName</button>
+				<button onclick="nombreNavegador()">appName</button>
+				<button onclick="version()">appVersion</button>
+				<button onclick="cookies()">cookieEnabled</button>
+				<button onclick="localizacion()">geolocation</button>
+				<p id="propiedad" style="margin-left: 20px;"></p>
+			</article>
+			<article>
+				<h4>Métodos</h4>
+				<button onclick="java()">javaEnabled()</button>
+				<p id="metodo" style="margin-left: 20px;"></p>
+			</article>
+		</section>
+		
+		<section>
+			<article>
+				<h4>Propiedad appCodeName</h4>
+				<p> Devuelve <span class="aCN">"Mozilla"</span> con Chrome</p>
+				<p> Devuelve <span class="aCN">"Mozilla"</span> con Firefox</p>
+				<p> Devuelve <span class="aCN">"Mozilla"</span> con Opera</p>
+				<p> Devuelve <span class="aCN">"Mozilla"</span> con Edge</p>
+			</article>
+			<article>
+				<h4>Propiedad appName</h4>
+				<p> Devuelve <span class="aN">"Netscape"</span> con Chrome</p>
+				<p> Devuelve <span class="aN">"Netscape"</span> con Firefox</p>
+				<p> Devuelve <span class="aN">"Netscape"</span> con Opera</p>
+				<p> Devuelve <span class="aN">"Netscape"</span> con Edge</p>
+			</article>
+			<article>
+				<h4>Propiedad appVersion</h4>
+				<p> Devuelve <span class="aV">"5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"</span> con Chrome</p>
+				<p> Devuelve <span class="aV">"5.0 (Windows)"</span> con Firefox</p>
+				<p> Devuelve <span class="aV">"5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 OPR/72.0.3815.320"</span> con Opera</p>
+				<p> Devuelve <span class="aV">"5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"</span> con Edge</p>
+			</article>
+			<article>
+				<h4>Propiedad cookieEnabled</h4>
+				<p> Devuelve <span class="cE">"true"</span> con Chrome</p>
+				<p> Devuelve <span class="cE">"true"</span> con Firefox</p>
+				<p> Devuelve <span class="cE">"true"</span> con Opera</p>
+				<p> Devuelve <span class="cE">"true"</span> con Edge</p>
+			</article>
+			<article>
+				<h4>Propiedad geolocation</h4>
+				<p> Devuelve <span class="g">"[object Geolocation]"</span> con Chrome</p>
+				<p> Devuelve <span class="g">"[object Geolocation]"</span> con Firefox</p>
+				<p> Devuelve <span class="g">"[object Geolocation]"</span> con Opera</p>
+				<p> Devuelve <span class="g">"[object Geolocation]"</span> con Edge</p>
+			</article>
+			<article>
+				<h4>Método javaEnabled()</h4>
+				<p> Devuelve <span class="jE">"false"</span> con Chrome</p>
+				<p> Devuelve <span class="jE">"false"</span> con Firefox</p>
+				<p> Devuelve <span class="jE">"false"</span> con Opera</p>
+				<p> Devuelve <span class="jE">"false"</span> con Edge</p>
+			</article>
+		</section>
+	</body>
+</html>

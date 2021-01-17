@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 19/09/2020 -->
+
+<!-- Ejercicio 3. Crea un documento html (index.html) que contenga 1 lista ordenada con los días de la semana (lunes a viernes).
+   Debajo debe aparecer un formulario donde el usuario pueda introducir nombre, apellido1, apellido2 
+   (ambos campos deben tener algún tipo de identificación) y un botón de envío (submit). -->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML up</title>
+	</head>
+	<body>
+		<header>
+			<h1>Sonia Antón Llanes
+			    <br>sonia.antlla@educa.jcyl.es</h1>
+		</header>
+		<section>
+			<h3>Práctica de listas y formularios</h3>
+			<div>
+				<h4>Lista</h4>
+				<ol>
+					<li>Lunes</li>
+					<li>Martes</li>
+					<li>Miercoles</li>
+					<li>Jueves</li>
+					<li>Viernes</li>
+				</ol>
+			</div>
+			<form>
+				<fieldset>
+				<legend>Formulario</legend>
+					<div>
+						<label for="LblNombre">Nombre  
+							<input type="text" name="nombre" id="LblNombre" placeholder="nombre" size="50">
+						</label>
+					</div>
+					<div>
+						<label for="LblApellido1">Apellido 1
+							<input type="text" name="apellido1" id="LblApellido1" placeholder="apellido1" size="50">
+						</label>
+					</div>
+					<div>
+						<label for="LblApellido2">Apellido 2
+							<input type="text" name="apellido2" id="LblApellido2" placeholder="apellido2" size="50">
+						</label>
+					</div>
+				</fieldset>
+				<input type="submit" value="Enviar">
+			</form>
+		</section>
+	</body>
+</html>

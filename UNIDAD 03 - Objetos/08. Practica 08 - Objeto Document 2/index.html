@@ -1,0 +1,121 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 26/11/2020 -->
+<!-- Practica 08 - Document 2 -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 08 - Document 2</title>
+		<script type="text/JavaScript" src="script.js"></script>	
+		<link rel="stylesheet" href="css/estilo.css">
+	</head>
+	<body id="body">
+		<header>
+			<p>-- Sonia Antón Llanes --</p>
+			<h2>DWEC - JavaScript T3. Utilización de Objetos Predefinidos</h2>
+			<h1>Práctica 8. Document (window.document)</h1>
+		</header>
+		
+		<section class="ejercicios">
+			<h3>Ejercicios cambio Estilos a Elementos del documento creado</h3>
+			<article>
+				<button onclick="cambiar()">h1 centrado y rojo</button>
+				<button onclick="negritaSubrayado()">Títulos en Negrita y Subrayado</button>
+				<button onclick="fondoPagina()">Cambiar fondo de página</button>
+				<button onclick="bordeImagen()">Borde a las Imágenes</button>
+				<button onclick="alineacionImg()">Cambiar alineación de Imágenes</button>
+				<button onclick="estiloBoton()">Cambiar estilo de Botones</button>
+				<button onclick="estiloInput()">Cambiar estilo de Input</button>
+				<button onclick="parrafoUno()">Cambiar estilo al Párrafo 1</button>
+				<button onclick="parrafoDos()">Cambiar estilo al Párrafo 2</button>
+				<button onclick="estiloRadioButton()">Cambiar estilo de RadioButton</button>
+				<button onclick="tamanoImagen()">Cambiar Tamaño de Imágenes</button>
+			</article>
+		</section>
+		
+		<section class="index">
+			<section>
+				<article>
+					<h3>Formularios</h3>
+					<form id="F1" action="#" method="get">
+						<legend>--- Formulario 1 ---</legend>
+					</form>
+					<form id="F2" action="#" method="get">
+						<legend>--- Formulario 2 ---</legend>
+					</form>
+				</article>
+				<article>
+					<h3>Imágenes</h3>
+					<img src="images/ovni.jpg" alt="besandoluna" title="Ovni Ciudad Tornado" width="30%">
+					<img src="images/paisaje.jpg" alt="bambi" title="Arboles Forestales" width="30%">
+					<img src="images/flor_agua.jpg" alt="navidad" title="Flor en el Agua" width="30%">
+				</article>
+				<article>
+					<h3>Enlaces Externos</h3>
+					<a href="https://www.w3schools.com/" title="W3Schools" alt="W3Schools" target="_blank">W3Schools</a>
+					<a href="https://www.google.es/" title="Google" alt="Google" target="_blank">Google</a>
+					<a href="https://es-es.facebook.com/" title="Facebook" alt="Facebook" target="_blank">Facebook</a>
+					<a href="https://www.youtube.com/" title="YouTube" alt="YouTube" target="_blank">YouTube</a>
+				</article>
+				<article>
+					<h3>Enlaces con 'Name'</h3>
+					<a name="W3Schools" href="https://www.w3schools.com/" title="W3Schools" alt="W3Schools" target="_blank">W3Schools</a>
+					<a name="Google" href="https://www.google.es/" title="Google" alt="Google" target="_blank">Google</a>
+					<a name="Facebook" href="https://es-es.facebook.com/" title="Facebook" alt="Facebook" target="_blank">Facebook</a>
+					<a name="YouTube" href="https://www.youtube.com/" title="YouTube" alt="YouTube" target="_blank">YouTube</a>
+				</article>
+				<article>
+					<h3>Párrafos</h3>
+					<p id="P1">párrafo 1</p>
+					<p id="P2">párrafo 2</p>
+					<p id="P3">párrafo 3</p>
+				</article>
+			</section>
+			<section>
+				<article class="masImg">
+					<h3>Más Imágenes</h3>
+					<img src="images/niña_luna.jpg" alt="besandoluna" title="Niña Luna" width="23%">
+					<img src="images/bambi_silueta.jpg" alt="bambi" title="Silueta de Bambi" width="23%">
+					<img src="images/arbol_navidad.jpg" alt="navidad" title="Arbol Navidad" width="23%">
+					<img src="images/la_tierra.jpg" alt="latierra" title="Tierra Colores" width="23%">
+				</article>
+				<article>
+					<h3>Más Formularios</h3>
+					<form id="F3" action="#" method="get">
+						<legend>--- Formulario 3 ---</legend>
+						<div>
+							<label for="LbNombre">Nombre </label>
+							<input type="text" name="nombre" id="LbNombre" placeholder="Nombre" size="40">
+						</div>
+						<div>
+							<label for="LbModulo">Módulo </label>
+							<input type="text" name="modulo" id="LbModulo" placeholder="Modulo" size="40">
+						</div>
+						<div>
+							<input type="submit" value="Enviar">
+							<input type="reset" value="Borrar">
+						</div>
+					</form>
+					<form id="F4" action="#" method="get">
+						<legend>--- Formulario 4 ---</legend>
+						<div>
+							<input type="radio" name="curso" id="LbCurso1" value="curso1">
+							<label for="LbCurso1">1º curso</label>
+						</div>
+						<div>
+							<input type="radio" name="curso" id="LbCurso2" value="curso2">
+							<label for="LbCurso2">2º curso</label>
+						</div>
+						<div>
+							<input type="submit" value="Enviar">
+							<input type="reset" value="Borrar">
+						</div>
+					</form>
+				</article>
+			</section>
+		</section>
+	</body>
+</html>

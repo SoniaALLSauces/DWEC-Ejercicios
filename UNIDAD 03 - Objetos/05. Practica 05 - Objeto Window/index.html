@@ -1,0 +1,110 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 24/11/2020 -->
+<!-- Practica 05 - Window 1 -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 05 - Window 1</title>
+		<style>	
+			article{
+				margin: 10px 20px;
+			}
+			button{
+				border: 2px solid grey;
+				border-radius: 10px;
+				width: 250px; height: 45px;
+				line-height: 40px;
+				text-align: center;
+				font-weight: bolder;
+				font-size: 1.1em;
+				background-color: rgb(240,140,140); 
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<p>-- Sonia Antón Llanes --</p>
+			<h2>DWEC - JavaScript</h2>
+			<h2>Tema 3. Utilización de Objetos Predefinidos</h2>
+		</header>
+		<section>
+			<header>
+				<h3>Práctica 5. Objeto Window</h3>
+			</header>
+			<article>
+				<button onclick="ventanaNueva()">Nueva Ventana</button>
+			</article>
+			<article>
+				<button onclick="cerrarVentana()">Cerrar Ventana</button>
+			</article>
+			<article>
+				<button onclick="ventanaW3school()">Abrir W3School</button>
+			</article>
+			<article>
+				<button onclick="cerrarVentanaSchool()">Cerrar W3School</button>
+			</article>
+			<article>
+				<button onclick="abrirGoogle()">Abrir Google</button>
+			</article>
+			<article>
+				<button onclick="nombreVariables()">Nombre Variables</button>
+			</article>
+			<article>
+				<button onclick="introducirNumeros()">Introduzca Numeros</button>
+			</article>
+		</section>
+		
+		<script>
+			var ventana1;
+			var w3school;
+			var google;
+			function ventanaNueva(){
+				ventana1= window.open("","ventana1", "width=400,height=400");
+			}
+			function cerrarVentana(){
+				ventana1.close();
+			}
+			function ventanaW3school(){
+				w3school= window.open("https://www.w3schools.com","w3school", "width=1000,height=1000");
+			}
+			function cerrarVentanaSchool(){
+				w3school.close();
+			}
+			function abrirGoogle(){
+				google= window.open("https://www.google.es","_self");
+			}
+			function nombreVariables(){
+				document.write("<h3>Práctica 5. Objeto Window</h3>");
+				document.write("<p><strong>Nombre de las variables:</strong></p>");
+				document.write("<p>Esta ventana se llama 'ventana1'</p>");
+				document.write("<p>Esta ventana se llama 'w3school'</p>");
+				document.write("<p>Esta ventana se llama 'google'</p>");
+			}
+			function introducirNumeros(){
+				var aceptar= 0;  //variable para contar los aceptar
+				var cancelar= 0;  //variable para contar los cancelar
+				alert ("Vamos a introducir 4 numeros");
+				var ahora; //variable para almacenar si el usuario pulsa aceptar o cancelar
+				var numero;  //variable que pedir cada numero
+				var cadena= "";  //variable para almacenar todos los numeros introducidos
+				for(var i=0; i<4; i++){  //Bucle que se repite 4 veces para solicitar numeros
+					ahora= confirm("¿Quiere introducir un numero ahora?");
+					if (ahora){
+						numero= prompt("Introduzca un número");
+						cadena += numero + ", ";
+						aceptar++;
+					} else{
+						cancelar++;
+					}
+				}
+				document.write("<p>Ha pulsado ACEPTAR " +aceptar+ " veces</p>");
+				document.write("<p>Ha pulsado CANCELAR " +cancelar+ " veces</p>");
+				document.write("<p>Los números que introducidos son: " +cadena+ "</p>");
+			}
+		</script>
+	</body>
+</html>

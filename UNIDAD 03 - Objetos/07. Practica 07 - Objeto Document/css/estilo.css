@@ -1,0 +1,27 @@
+/* Sonia Anton Llanes */
+/* Fecha: 30/11/2020 */
+/* Practica 07 - Document 1 */
+
+
+.ejercicios{
+	margin: 10px 20px;
+}
+.ejercicios>h3, .documento>h3{
+	text-decoration: underline;
+}
+.ejercicios button{
+	border: 2px solid grey;
+	border-radius: 10px;
+	width: 250px; height: 45px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: bolder;
+	font-size: .95rem;
+	background-color: rgb(240,140,140); 
+}
+
+.index{
+	border: 1px solid #BF2411;
+    margin: 3%;
+    padding: 0 3% 3% 3%;
+}

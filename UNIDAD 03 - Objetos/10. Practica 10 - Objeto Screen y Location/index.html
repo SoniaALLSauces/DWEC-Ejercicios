@@ -1,0 +1,119 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 02/12/2020 -->
+<!-- Practica 10 - Objetos Screen y Location -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 10 - Objetos Screen y Location</title>
+		<script type="text/JavaScript" src="script.js"></script>	
+		<link rel="stylesheet" href="css/estilo.css">
+	</head>
+	<body>
+		<header>
+			<p>-- Sonia Antón Llanes --</p>
+			<h2>DWEC - JavaScript T3. Utilización de Objetos Predefinidos</h2>
+			<h2>Práctica 10. Objetos screen y location</h2>
+		</header>
+		
+		<section class="ejercicios">
+			<article>
+				<button onclick="recargar()">Recargar Página</button>
+				<button onclick="estilos()">Cargar Estilos</button>
+			</article>
+			<article>
+				<button onclick="nuevaVentana()">Ventana Nueva</button>
+				<button onclick="nuevaWindow()">Nueva window <span style="font-size: 0.7rem;">con propiedades screen y location</span></button>
+			</article>
+		</section>
+		
+		<section class="ejercicios">
+			<h3>Objeto screen</h3>
+			<article>
+				<h4>Propiedades (pincha en ellas para mostrar)</h4>
+				<div class="tabla">
+					<button onclick="alturaMax()">Altura Máxima de la Pantalla (pixels)</button>
+					<p id="altM"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="anchoMax()">Ancho Máximo de la Pantalla (pixels)</button>
+					<p id="anchM"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="color()">Bits por pixel</button>
+					<p id="color"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="altoTotal()">Alto de la Pantalla (pixels)</button>
+					<p id="alto"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="anchoTotal()">Ancho de la Pantalla (pixels)</button>
+					<p id="ancho"></p>
+				</div>
+			</article>
+		</section>
+		
+		<section class="ejercicios">
+			<h3>Objeto location</h3>
+			<article>
+				<h4>Propiedades (pincha en ellas para mostrar)</h4>
+				<div class="tabla">
+					<button onclick="urlAncla()">hash</button>
+					<p id="urlA"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="nombrePuerto()">host</button>
+					<p id="nHost"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="nombreHost()">hostname</button>
+					<p id="nombPuert"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="urlCompleta()">href</button>
+					<p id="urlC"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="origen()">oring</button>
+					<p id="org"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="rutaAcceso()">pathname</button>
+					<p id="ruta"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="puerto()">port</button>
+					<p id="npuerto"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="protocolo()">protocol</button>
+					<p id="protoc"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="consulta()">search</button>
+					<p id="cons"></p>
+				</div>
+			</article>
+			<article>
+				<h4>Métodos (pincha en ellos para ejecutar)</h4>
+				<div class="tabla">
+					<button onclick="nuevoDoc()">assign()</button>
+					<p id="docNew"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="recargar()">reload()</button>
+					<p id="recarga"></p>
+				</div>
+				<div class="tabla">
+					<button onclick="reemplazar()">replace()</button>
+					<p id="reemplaza"></p>
+				</div>
+			</article>
+		</section>
+
+	</body>
+</html>

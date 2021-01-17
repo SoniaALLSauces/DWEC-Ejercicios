@@ -1,0 +1,126 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 24/11/2020 -->
+<!-- Practica 06 - Window 2 -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 06 - Window 2</title>
+		<style>	
+			article{
+				margin: 10px 20px;
+			}
+			button{
+				border: 2px solid grey;
+				border-radius: 10px;
+				width: 250px; height: 45px;
+				line-height: 40px;
+				text-align: center;
+				font-weight: bolder;
+				font-size: 1.1em;
+				background-color: rgb(240,140,140); 
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<p>-- Sonia Antón Llanes --</p>
+			<h2>DWEC - JavaScript</h2>
+			<h2>Tema 3. Utilización de Objetos Predefinidos</h2>
+		</header>
+		<section>
+			<header>
+				<h3>Práctica 6. Objeto Window</h3>
+			</header>
+			<article>
+				<h4> Ejercicio 1. Comprobar que la ventana emergente está abierta o cerrada</h4>
+				<button onclick="ventanaNueva()">Nueva Ventana</button>
+				<button onclick="cerrarVentana()">Cerrar Ventana</button>
+				<button onclick="comprobarEstado()">Comprobar estado</button>
+			</article>
+			<article>
+				<h4> Ejercicio 2. Mover la ventana emergente</h4>
+				<button onclick="ventanaNueva()">Nueva Ventana</button>
+				<button onclick="moverDcha()">Mover a la Derecha</button>
+				<button onclick="moverIzda()">Mover a la Izquierda</button>
+			</article>
+			<article>
+				<h4> Ejercicio 3. Script emergente cada 5 segundos</h4>
+				<button onclick="cincoSegundos()">Pulsa boton</button>
+				<button onclick="parar()">Parar</button>
+			</article>
+			<article>
+				<h4> Ejercicio 4. Contador (visualizado por console)</h4>
+				<button onclick="comenzar()">Comenzar</button>
+				<button onclick="parar()">Parar</button>
+			</article>
+			<article>
+				<h4> Ejercicio 5. Cuenta atras (visualizado por consola)</h4>
+				<button onclick="comenzarMinuto()">Comenzar</button>
+			</article>
+		</section>
+		
+		<script>
+			var ventana1;
+			var temporizador;
+			function ventanaNueva(){
+				ventana1= window.open("","ventana1", "width=400,height=400");
+			}
+			function cerrarVentana(){
+				ventana1.close();
+			}
+			function comprobarEstado(){
+				if (ventana1.closed){
+					document.write("<h2>Ventana emergente CERRADA</h2>");
+				} else{
+					document.write("<h2>Ventana emergente ABIERTA</h2>");
+				}
+			}
+			
+			function moverDcha(){
+				ventana1.focus();
+				ventana1.moveTo(1000,500);
+			}
+			function moverIzda(){
+				ventana1.focus();
+				ventana1.moveTo(100,500);
+			}
+			
+			function mensaje(){
+				alert("Han pasado 5 segundos");
+			}
+			function cincoSegundos(){
+				temporizador = setInterval(mensaje,5000);
+			}
+			function parar(){
+				clearInterval(temporizador);
+			}
+			
+			var cont=0;
+			function contador(){
+				cont++;
+				console.log(cont);
+			}	
+			function comenzar(){
+				temporizador = setInterval(contador,1000);	
+			}
+			
+			var tiempo=60;
+			function contadorTiempo(){
+				if (tiempo==0){
+					clearInterval(temporizador);
+					alert("¡TIEMPO AGOTADO!");
+				} else{
+					tiempo--;
+					console.log(tiempo);
+				}
+			}	
+			function comenzarMinuto(){
+				temporizador = setInterval(contadorTiempo,100);
+			}
+		</script>
+	</body>
+</html>

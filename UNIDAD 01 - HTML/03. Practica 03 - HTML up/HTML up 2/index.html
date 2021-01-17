@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 19/09/2020 -->
+
+<!-- Ejercicio 2. Crea un documento html (index.html) que contenga tu horario escolar en forma de tabla
+	con el número de filas y columnas necesarios. -->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML up</title>
+		<style>
+			table,tr,th,td {border: 1px solid black;
+							border-collapse: collapse;}
+			.thead {border: 1px solid white;
+					font-size: large;}
+			.horas {border-left: 1px solid white;}
+			th,td{width: 100px;
+				  height: 25px;}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Sonia Antón Llanes
+			    <br>sonia.antlla@educa.jcyl.es</h1>
+		</header>
+		<section>
+			<header>
+				<h3>CFGS Desarrollo Aplicaciones Web 2º</h3>
+			</header>
+			<table>
+				<thead>
+					<tr>
+						<th class="thead" colspan="6" style="background-color:#DCE775">Horario de Clases<br></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="horas" style="background-color:#E6EE9C">Horas</th>
+						<th style="background-color:#E6EE9C">Lunes</th>
+						<th style="background-color:#E6EE9C">Martes</th>
+						<th style="background-color:#E6EE9C">Miércoles</th>
+						<th style="background-color:#E6EE9C">Jueves</th>
+						<th style="background-color:#E6EE9C">Viernes</th>
+					</tr>
+					<tr>
+						<th style="background-color:#E6EE9C">08:30<sub>  - 9:20</sub></th>
+						<th rowspan="2" style="background-color:#5DADE2">DAW</th>
+						<th rowspan="2" style="background-color:#F48FB1">EIE</th>
+						<th rowspan="2" style="background-color:#FFEB3B">DWEC</th>
+						<th rowspan="2" style="background-color:#4CAF50 ">DIW</th>
+						<th style="background-color:#F44336">DWES</th>
+					</tr>
+					<tr>
+						<th style="background-color:#E6EE9C">09:20<sub>  - 10:10</sub></th>
+						<th rowspan="2" style="background-color:#5DADE2">DAW</th>
+					</tr>
+					<tr>
+						<th style="background-color:#E6EE9C">10:10<sub>  - 11:00</sub></th>
+						<th rowspan="2" style="background-color:#4CAF50">DIW</th>
+						<th rowspan="2" style="background-color:#FFEB3B">DWEC</th>
+						<th rowspan="2" style="background-color:#F44336">DWES</th>
+						<th rowspan="2" style="background-color:#F44336">DWES</th>
+					</tr>
+					<tr>
+						<th style="background-color:#E6EE9C">11:00<sub>  - 11:50</sub></th>
+						<th style="background-color:#F48FB1">EIE</th>
+					</tr>
+					<tr>
+						<th style="background-color:#E6EE9C">11:50<sub>  - 12:15</sub></th>
+						<th colspan="5" style="background-color:white">RECREO</th>
+					</tr>
+					<tr>
+						<th style="background-color:#E6EE9C">12:15<sub>  - 13:05</sub></th>
+						<th rowspan="2" style="background-color:#F44336">DWES</th>
+						<th rowspan="2" style="background-color:#F44336">DWES</th>
+						<th rowspan="2" style="background-color:#4CAF50">DIW</th>
+						<th rowspan="2" style="background-color:#FFEB3B">DWEC</th>
+						<th rowspan="2" style="background-color:#FFEB3B">DWEC</th>
+					</tr>
+					<tr>
+						<th style="background-color:#E6EE9C">13:05<sub>  - 13:55</sub></th>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</body>
+</html>

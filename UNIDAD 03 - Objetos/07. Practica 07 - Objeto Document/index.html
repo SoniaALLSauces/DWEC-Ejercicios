@@ -1,0 +1,89 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 26/11/2020 -->
+<!-- Practica 07 - Document 1 -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 07 - Document 1</title>
+		<script type="text/JavaScript" src="script.js"></script>	
+		<link rel="stylesheet" href="css/estilo.css">
+	</head>
+	<body>
+		<header>
+			<p>-- Sonia Antón Llanes --</p>
+			<h2>DWEC - JavaScript T3. Utilización de Objetos Predefinidos</h2>
+			<h2>Práctica 7. Document (window.document)</h2>
+		</header>
+		
+		<section class="ejercicios">
+			<h3>Ejercicios con los elementos del index abajo creado</h3>
+			<article>
+				<h4>Ejercicio 1. Muestra el título, fecha última modificación, dominio y URL</h4>
+				<button onclick="mostrar()">Mostrar por Pantalla</button>
+			</article>
+			<article>
+				<h4>Ejercicio 2. Contadores Elementos (visualizado por console)</h4>
+				<button onclick="contFormularios()">Contador Formularios</button>
+				<button onclick="contImagenes()">Contador Imágenes</button>
+				<button onclick="contEnlaces()">Contador Enlaces</button>
+				<button onclick="contEnlacesName()">Contador Enlaces con Name</button>
+			</article>
+			<article>
+				<h4>Ejercicio 2 (cont.). Contadores Elementos (visualizado por console)</h4>
+				<button onclick="contIdUno()">Contador Id="P1"</button>
+				<button onclick="contParrafos()">Contador Párrafos</button>
+				<button onclick="contClass()">Contador Elementos con Name</button>
+			</article>
+		</section>
+		
+		<section class="index">
+			<h3>Index Ejercicio 7</h3>
+			<article>
+				<h3>Formularios</h3>
+				<form id="F1" action="#" method="get">
+					<legend>--- Formulario 1 ---</legend>
+				</form>
+				<form id="F2" action="#" method="get">
+					<legend>--- Formulario 2 ---</legend>
+				</form>
+			</article>
+			<article>
+				<h3>Imágenes</h3>
+				<img src="images/niña_luna.jpg" alt="besandoluna" title="Niña Luna" width="30%">
+				<img src="images/bambi_silueta.jpg" alt="bambi" title="Arboles Forestales" width="30%">
+				<img src="images/arbol_navidad.jpg" alt="navidad" title="Ovni Ciudad Tornado" width="30%">
+			</article>
+			<article>
+				<h3>Enlaces Externos</h3>
+				<a href="https://www.w3schools.com/" title="W3Schools" alt="W3Schools" target="_blank">W3Schools</a>
+				<a href="https://www.google.es/" title="Google" alt="Google" target="_blank">Google</a>
+				<a href="https://es-es.facebook.com/" title="Facebook" alt="Facebook" target="_blank">Facebook</a>
+				<a href="https://www.youtube.com/" title="YouTube" alt="YouTube" target="_blank">YouTube</a>
+			</article>
+			<article>
+				<h3>Enlaces con 'Name'</h3>
+				<a name="W3Schools" href="https://www.w3schools.com/" title="W3Schools" alt="W3Schools" target="_blank">W3Schools</a>
+				<a name="Google" href="https://www.google.es/" title="Google" alt="Google" target="_blank">Google</a>
+				<a name="Facebook" href="https://es-es.facebook.com/" title="Facebook" alt="Facebook" target="_blank">Facebook</a>
+				<a name="YouTube" href="https://www.youtube.com/" title="YouTube" alt="YouTube" target="_blank">YouTube</a>
+			</article>
+			<article>
+				<h3>Párrafos</h3>
+				<p id="P1">parrafo 1</p>
+				<p id="P2">párrafo 2</p>
+				<p id="P3">párrafo 3</p>
+			</article>
+			<article>
+				<h3>Botones</h3>
+				<button>Botón 1</button>
+				<button>Botón 2</button>
+				<button>Botón 3</button>
+				<button>Botón 4</button>
+			</article>
+		</section>
+	</body>
+</html>

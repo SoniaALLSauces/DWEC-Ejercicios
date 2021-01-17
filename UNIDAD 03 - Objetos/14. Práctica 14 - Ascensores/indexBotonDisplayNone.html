@@ -1,0 +1,325 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 17/12/2020 -->
+<!-- Ultima modificación: 11/01/2021 -->
+<!-- Practica 14 - Ascensores -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 14 - Ascensores</title>
+		<script type="text/JavaScript" src="scriptFuncionIndependiente.js"></script>
+		<style>	
+			table{border: 1px solid black;}
+			td{width: 100px;
+			   border: 1px solid black;
+			   border-radius: 5px;
+			   position: relative;}
+			.paraAscensor{border: none;}
+			.parar{border: none;}
+			article{width: 100%; height: 40px;
+					border: 1px solid black;
+					border-radius: 5px;
+					text-align: center;
+					line-height: 40px;}
+			button{display: inline;
+				   position: relative;
+				   left: 45%;}
+			.botonIniciar{width: 300px; height: 40px;
+						  margin: 0 0 20px 20px;
+						  border: 2px solid grey;
+						  border-radius: 10px;
+						  line-height: 37px;
+						  text-align: center;
+						  font-weight: bolder;
+						  font-size: .95rem;
+						  background-color: rgb(240,140,140);
+						  left: 10%;}
+			.botonesAsc1, 
+			.botonesAsc2, 
+			.botonesAsc3, 
+			.botonesAsc4{display: none;
+						 width: 60px;}
+		</style>
+	</head>
+	<body>
+		<header>
+			<p>-- Sonia Antón Llanes --</p>
+			<h2>DWEC - JavaScript</h2>
+			<h2>Tema 3. Utilización de Objetos Predefinidos</h2>
+		</header>
+		<section>
+			<header>
+				<h3>Practica 14. Ascensores del Centro Comercial</h3>
+			</header>
+			<button class="botonIniciar" onclick="iniciar()">Iniciar Ascensores</button>
+			<table class="ascensores">
+				<tr>
+					<th>Ascensor 1</th>
+					<th>Ascensor 2</th>
+					<th>Ascensor 3</th>
+					<th>Ascensor 4</th>
+				</tr>
+				<tr>
+					<td class="ascensor1">6
+						<div class="botonesAsc1">
+							<button onclick="piso(0,1)">6</button>
+							<button onclick="piso(1,1)">5</button>
+							<button onclick="piso(2,1)">4</button>
+							<button onclick="piso(3,1)">3</button>
+							<button onclick="piso(4,1)">2</button>
+							<button onclick="piso(5,1)">1</button>
+						</div>
+					</td>
+					<td class="ascensor2">6
+						<div class="botonesAsc2">
+							<button onclick="piso(0,2)">6</button>
+							<button onclick="piso(1,2)">5</button>
+							<button onclick="piso(2,2)">4</button>
+							<button onclick="piso(3,2)">3</button>
+							<button onclick="piso(4,2)">2</button>
+							<button onclick="piso(5,2)">1</button>
+						</div>
+					</td>
+					<td class="ascensor3">6
+						<div class="botonesAsc3">
+							<button onclick="piso(0,3)">6</button>
+							<button onclick="piso(1,3)">5</button>
+							<button onclick="piso(2,3)">4</button>
+							<button onclick="piso(3,3)">3</button>
+							<button onclick="piso(4,3)">2</button>
+							<button onclick="piso(5,3)">1</button>
+						</div>
+					</td>
+					<td class="ascensor4">6
+						<div class="botonesAsc4">
+							<button onclick="piso(0,4)">6</button>
+							<button onclick="piso(1,4)">5</button>
+							<button onclick="piso(2,4)">4</button>
+							<button onclick="piso(3,4)">3</button>
+							<button onclick="piso(4,4)">2</button>
+							<button onclick="piso(5,4)">1</button>
+						</div>
+					</td>
+					<td class="parar" onclick="parar(0)"><article>PARAR</article></td>
+				</tr>
+				<tr>
+					<td class="ascensor1">5
+						<div class="botonesAsc1">
+							<button onclick="piso(0,1)">6</button>
+							<button onclick="piso(1,1)">5</button>
+							<button onclick="piso(2,1)">4</button>
+							<button onclick="piso(3,1)">3</button>
+							<button onclick="piso(4,1)">2</button>
+							<button onclick="piso(5,1)">1</button>
+						</div>
+					</td>
+					<td class="ascensor2">5
+						<div class="botonesAsc2">
+							<button onclick="piso(0,2)">6</button>
+							<button onclick="piso(1,2)">5</button>
+							<button onclick="piso(2,2)">4</button>
+							<button onclick="piso(3,2)">3</button>
+							<button onclick="piso(4,2)">2</button>
+							<button onclick="piso(5,2)">1</button>
+						</div>
+					</td>
+					<td class="ascensor3">5
+						<div class="botonesAsc3">
+							<button onclick="piso(0,3)">6</button>
+							<button onclick="piso(1,3)">5</button>
+							<button onclick="piso(2,3)">4</button>
+							<button onclick="piso(3,3)">3</button>
+							<button onclick="piso(4,3)">2</button>
+							<button onclick="piso(5,3)">1</button>
+						</div>
+					</td>
+					<td class="ascensor4">5
+						<div class="botonesAsc4">
+							<button onclick="piso(0,4)">6</button>
+							<button onclick="piso(1,4)">5</button>
+							<button onclick="piso(2,4)">4</button>
+							<button onclick="piso(3,4)">3</button>
+							<button onclick="piso(4,4)">2</button>
+							<button onclick="piso(5,4)">1</button>
+						</div>
+					</td>
+					<td class="parar" onclick="parar(1)"><article>PARAR</article></td>
+				</tr>
+				<tr>
+					<td class="ascensor1">4
+						<div class="botonesAsc1">
+							<button onclick="piso(0,1)">6</button>
+							<button onclick="piso(1,1)">5</button>
+							<button onclick="piso(2,1)">4</button>
+							<button onclick="piso(3,1)">3</button>
+							<button onclick="piso(4,1)">2</button>
+							<button onclick="piso(5,1)">1</button>
+						</div>
+					</td>
+					<td class="ascensor2">4
+						<div class="botonesAsc2">
+							<button onclick="piso(0,2)">6</button>
+							<button onclick="piso(1,2)">5</button>
+							<button onclick="piso(2,2)">4</button>
+							<button onclick="piso(3,2)">3</button>
+							<button onclick="piso(4,2)">2</button>
+							<button onclick="piso(5,2)">1</button>
+						</div>
+					</td>
+					<td class="ascensor3">4
+						<div class="botonesAsc3">
+							<button onclick="piso(0,3)">6</button>
+							<button onclick="piso(1,3)">5</button>
+							<button onclick="piso(2,3)">4</button>
+							<button onclick="piso(3,3)">3</button>
+							<button onclick="piso(4,3)">2</button>
+							<button onclick="piso(5,3)">1</button>
+						</div>
+					</td>
+					<td class="ascensor4">4
+						<div class="botonesAsc4">
+							<button onclick="piso(0,4)">6</button>
+							<button onclick="piso(1,4)">5</button>
+							<button onclick="piso(2,4)">4</button>
+							<button onclick="piso(3,4)">3</button>
+							<button onclick="piso(4,4)">2</button>
+							<button onclick="piso(5,4)">1</button>
+						</div>
+					</td>
+					<td class="parar" onclick="parar(2)"><article>PARAR</article></td>
+				</tr>
+				<tr>
+					<td class="ascensor1">3
+						<div class="botonesAsc1">
+							<button onclick="piso(0,1)">6</button>
+							<button onclick="piso(1,1)">5</button>
+							<button onclick="piso(2,1)">4</button>
+							<button onclick="piso(3,1)">3</button>
+							<button onclick="piso(4,1)">2</button>
+							<button onclick="piso(5,1)">1</button>
+						</div>
+					</td>
+					<td class="ascensor2">3
+						<div class="botonesAsc2">
+							<button onclick="piso(0,2)">6</button>
+							<button onclick="piso(1,2)">5</button>
+							<button onclick="piso(2,2)">4</button>
+							<button onclick="piso(3,2)">3</button>
+							<button onclick="piso(4,2)">2</button>
+							<button onclick="piso(5,2)">1</button>
+						</div>
+					</td>
+					<td class="ascensor3">3
+						<div class="botonesAsc3">
+							<button onclick="piso(0,3)">6</button>
+							<button onclick="piso(1,3)">5</button>
+							<button onclick="piso(2,3)">4</button>
+							<button onclick="piso(3,3)">3</button>
+							<button onclick="piso(4,3)">2</button>
+							<button onclick="piso(5,3)">1</button>
+						</div>
+					</td>
+					<td class="ascensor4">3
+						<div class="botonesAsc4">
+							<button onclick="piso(0,4)">6</button>
+							<button onclick="piso(1,4)">5</button>
+							<button onclick="piso(2,4)">4</button>
+							<button onclick="piso(3,4)">3</button>
+							<button onclick="piso(4,4)">2</button>
+							<button onclick="piso(5,4)">1</button>
+						</div>
+					</td>
+					<td class="parar" onclick="parar(3)"><article>PARAR</article></td>
+				</tr>
+				<tr>
+					<td class="ascensor1">2
+						<div class="botonesAsc1">
+							<button onclick="piso(0,1)">6</button>
+							<button onclick="piso(1,1)">5</button>
+							<button onclick="piso(2,1)">4</button>
+							<button onclick="piso(3,1)">3</button>
+							<button onclick="piso(4,1)">2</button>
+							<button onclick="piso(5,1)">1</button>
+						</div>
+					</td>
+					<td class="ascensor2">2
+						<div class="botonesAsc2">
+							<button onclick="piso(0,2)">6</button>
+							<button onclick="piso(1,2)">5</button>
+							<button onclick="piso(2,2)">4</button>
+							<button onclick="piso(3,2)">3</button>
+							<button onclick="piso(4,2)">2</button>
+							<button onclick="piso(5,2)">1</button>
+						</div>
+					</td>
+					<td class="ascensor3">2
+						<div class="botonesAsc3">
+							<button onclick="piso(0,3)">6</button>
+							<button onclick="piso(1,3)">5</button>
+							<button onclick="piso(2,3)">4</button>
+							<button onclick="piso(3,3)">3</button>
+							<button onclick="piso(4,3)">2</button>
+							<button onclick="piso(5,3)">1</button>
+						</div>
+					</td>
+					<td class="ascensor4">2
+						<div class="botonesAsc4">
+							<button onclick="piso(0,4)">6</button>
+							<button onclick="piso(1,4)">5</button>
+							<button onclick="piso(2,4)">4</button>
+							<button onclick="piso(3,4)">3</button>
+							<button onclick="piso(4,4)">2</button>
+							<button onclick="piso(5,4)">1</button>
+						</div>
+					</td>
+					<td class="parar" onclick="parar(4)"><article>PARAR</article></td>
+				</tr>
+					<td class="ascensor1">1
+						<div class="botonesAsc1">
+							<button onclick="piso(0,1)">6</button>
+							<button onclick="piso(1,1)">5</button>
+							<button onclick="piso(2,1)">4</button>
+							<button onclick="piso(3,1)">3</button>
+							<button onclick="piso(4,1)">2</button>
+							<button onclick="piso(5,1)">1</button>
+						</div>
+					</td>
+					<td class="ascensor2">1
+						<div class="botonesAsc2">
+							<button onclick="piso(0,2)">6</button>
+							<button onclick="piso(1,2)">5</button>
+							<button onclick="piso(2,2)">4</button>
+							<button onclick="piso(3,2)">3</button>
+							<button onclick="piso(4,2)">2</button>
+							<button onclick="piso(5,2)">1</button>
+						</div>
+					</td>
+					<td class="ascensor3">1
+						<div class="botonesAsc3">
+							<button onclick="piso(0,3)">6</button>
+							<button onclick="piso(1,3)">5</button>
+							<button onclick="piso(2,3)">4</button>
+							<button onclick="piso(3,3)">3</button>
+							<button onclick="piso(4,3)">2</button>
+							<button onclick="piso(5,3)">1</button>
+						</div>
+					</td>
+					<td class="ascensor4">1
+						<div class="botonesAsc4">
+							<button onclick="piso(0,4)">6</button>
+							<button onclick="piso(1,4)">5</button>
+							<button onclick="piso(2,4)">4</button>
+							<button onclick="piso(3,4)">3</button>
+							<button onclick="piso(4,4)">2</button>
+							<button onclick="piso(5,4)">1</button>
+						</div>
+					</td>
+					<td class="parar" onclick="parar(5)"><article>PARAR</article></td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</html>

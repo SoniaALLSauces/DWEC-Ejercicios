@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 19/09/2020 -->
+
+<!-- Ejercicio 4. Crea un documento html (index.html) que contenga 1 formulario que contenga los distintos tipos
+   de campos: texto, radiobutton, checklist y submit. Elige tu los campos. -->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML up</title>
+	</head>
+	<body>
+		<header>
+			<h1>Sonia Antón Llanes
+			    <br>sonia.antlla@educa.jcyl.es</h1>
+		</header>
+		<section>
+			<h3>Formulario CFGS Desarrollo Aplicaciones Web</h3>
+			<form>
+				<fieldset>
+					<legend>Asignatura</legend>
+					<div>
+						<label for="LblAsignatura">Asignatura
+							<input type="text" name="asignatura" id="LblAsignatura" placeholder="nombre de la asignatura" size="100">
+						</label>
+					</div>
+					<div>
+						<label for="LblProfesor">Profesor
+							<input type="text" name="profesor" id="LblProfesor" placeholder="profesor que la imparte" size="100">
+						</label>
+					</div>
+				
+					<!-- radiobutton -->
+					Curso
+					<div>
+						<label for="LblDAW1">
+							<input type="radio" name="curso" id="LblDAW1" value="daw1">DAW 1º
+						</label>
+						<label for="LblDAW2">
+							<input type="radio" name="curso" id="LblDAW2" value="daw2">DAW 2º
+						</label>
+					</div>
+				</fieldset>
+				
+					<!-- select -->
+				<fieldset>
+					<legend>Horas de la Asignatura</legend>
+					<div>
+						<label for="LblHorasLectivas">Horas Lectivas
+							<select name="HorasLectivas" id="LblHorasLectivas" size="1">
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="6">6</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+							</select>
+						</label>
+					</div>					
+					<div>
+						<label for="LblHorasEstudio">Tiempo Recomendado de Estudio
+							<select name="HorasEstudio" id="LblHorasEstudio" size="1">
+								<option value="1/4">15 minutos</option>
+								<option value="1/2">30 minutos</option>
+								<option value="1">1 hora</option>
+								<option value="3/2">1 hora y media</option>
+								<option value="2">2 horas</option>
+							</select>
+						</label>
+					</div>
+				</fieldset>
+				
+					<!-- checkbox -->
+				<fieldset>
+					<legend>Software Utilizado</legend>
+					<div>
+						<label for="LblVirtualBox">
+							<input type="checkbox" name="virtualbox" id="LblVirtualBox" value="si">VirtualBox     
+						</label>
+					</div>
+					<div>
+						<label for="LblPSeInt">
+							<input type="checkbox" name="pseint" id="LblPSeInt" value="si">PSeInt     
+						</label>
+					</div>
+					<div>
+						<label for="LblNotepad++">
+							<input type="checkbox" name="notepad++" id="LblNotepad" value="si">Notepad++     
+						</label>
+					</div>
+					<div>
+						<label for="LblNetbeans">
+							<input type="checkbox" name="netbeans" id="LblNetbeans" value="si">NetBeans     
+						</label>
+					</div>
+					<div>
+						<label for="LblBlueJ">
+							<input type="checkbox" name="bluej" id="LblBlueJ" value="si">BlueJ     
+						</label>
+					</div>
+					<div>
+						<label for="LblDia">
+							<input type="checkbox" name="dia" id="LblDia" value="si">Dia     
+						</label>
+					</div>
+					<div>
+						<label for="LblStarUML">
+							<input type="checkbox" name="staruml" id="LblStarUML" value="si">StarUML     
+						</label>
+					</div>
+					<div>
+						<label for="LblMySQL">
+							<input type="checkbox" name="mysql" id="LblMySQL" value="si">MySQL     
+						</label>
+					</div>
+				</fieldset>
+				
+				<input type="submit" value="Enviar">
+			</form>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+/* Sonia Anton Llanes */
+/* Fecha: 30/11/2020 */
+/* Practica 10 - Objeto screen y location */
+
+
+.ejercicios{
+	margin: 10px 20px;
+}
+.ejercicios>h3{
+	text-decoration: underline;
+}
+
+button{
+	margin: 5px;
+	border: 2px solid grey;
+	border-radius: 10px;
+	line-height: 37px;
+	text-align: center;
+	font-weight: bolder;
+	font-size: .95rem;
+	background-color: rgb(240,140,140); 
+	position: relative;
+	left: 5px;
+}
+.ejercicios button{
+	width: 320px; height: 40px;
+	position: relative;
+	left: 5px;
+}
+
+.tabla{
+	position: relative;
+}
+.tabla button{
+	width: 350px; height: 40px;
+	position: relative;
+	left: 5px;
+}
+.tabla p{
+	position: absolute;
+	top: -5px;
+	left: 400px;
+}
+
+span{
+	color: blue;
+	font-weight: bold;
+}

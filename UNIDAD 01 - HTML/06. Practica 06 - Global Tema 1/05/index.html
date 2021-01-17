@@ -1,0 +1,203 @@
+<!-- 
+	Autores.-
+		Sonia Antón Llanes
+		Susana Fabián Antón
+		Cristina Manjón Lacalle
+		Nacho del Prado Losada
+	Fecha.- 27/09/2020
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PRÁCTICA 05 - Diseño web vs Desarrollo web</title>
+	</head>
+	<body>
+		<header>
+			<!-- Fijo y transparente -->
+			<div>
+				<!-- Logo del hotel -->
+				<img src="#" alt="#"/>
+			</div>
+			<div>
+				<h1>Nombre del Hotel</h1>
+				<address>
+					Dirección del hotel<br>
+					Telefóno del hotel
+				</address>
+			</div>
+			<div>
+				<!-- Logos con enlace a redes sociales -->
+				<a href="#"><img src="#" alt="#"></a>
+				<a href="#"><img src="#" alt="#"></a>
+				<a href="#"><img src="#" alt="#"></a>
+			</div>
+		</header>
+		<main>
+			<section>
+				<header>
+					<h2>Nombre del Hotel</h2>
+				</header>
+				<!-- Imágenes del hotel que van cambiando -->
+				<ul class="slider auto">
+					<li id="img1"><img src="#" alt="#"></li>
+					<li id="img2"><img src="#" alt="#"></li>
+					<li id="img3"><img src="#" alt="#"></li>
+					<li id="img4"><img src="#" alt="#"></li>
+					<li id="img5"><img src="#" alt="#"></li>
+				</ul>
+				<!-- Formulario de reserva -->
+				<form>
+					<label for="entrada">Fecha de entrada:</label>
+					<input type="date" id="entrada" name="fecha-entrada">
+					<label for="salida">Fecha de salida:</label>
+					<input type="date" id="salida" name="fecha-salida">
+					<input type="number" id="adultos" name="adultos" min="1" max="5">
+					<input type="number" id="adultos" name="adultos" min="0" max="5">
+					<input type="text" id="promociones" name="promociones">
+					<label for="promociones">Código promoción:</label>
+					<input type="submit" value="Reserva">
+				</form>
+			</section>
+			<section>
+				<!-- Navegador -->
+				<nav>
+					<a href="#hotel">Nuestro Hotel</a> |
+				    <a href="#habitaciones">Habitaciones</a> |
+					<a href="#gastronomia">Gastronomía</a> |
+					<a href="#servicios">Servicios</a>
+				</nav>
+				<!-- Nuestro Hotel -->
+				<article>
+					<header>
+						<h2 id="hotel">Nuestro Hotel</h2>
+					</header>
+					<!-- ¿Quienes somos? -->
+					<article>
+						<header>
+							<h3>¿Quienes somos?</h3>
+						</header>
+						<p>Descripción del hotel</p>
+						<!-- Mejores reseñas -->
+						<ul class="slider manual">
+							<li id="coment1">Comentario 1</li>
+							<li id="coment2">Comentario 2</li>
+							<li id="coment3">Comentario 3</li>
+							<li id="coment4">Comentario 4</li>
+							<li id="coment5">Comentario 5</li>
+						</ul>
+						<img src="#" alt="#">
+					</article>
+					<!-- ¿Donde estamos? -->
+					<article>
+						<header>
+							<h3>¿Dónde estamos?</h3>
+						</header>
+						<p>Descripción de la ciudad</p>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47436.92202012238!2d-5.706608831895231!3d42.00440397821944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd384cf36eb3c6d5%3A0xe0ff9595fdf7c789!2sBenavente%2C%20Zamora!5e0!3m2!1ses!2ses!4v1601208756229!5m2!1ses!2ses" width="300" height="225" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					</article>
+				</article>
+				<!-- Habitaciones -->
+				<article>
+					<header>
+						<h2 id="habitaciones">Habitaciones</h2>
+					</header>
+					<p>Tipos de habitaciones</p>
+					<p>Servicios de habitaciones</p>
+					<!-- Fotos de la habitaciones -->
+					<ul class="slider manual">
+						<li id="hab1"><img src="#" alt="#"></li>
+						<li id="hab2"><img src="#" alt="#"></li>
+						<li id="hab3"><img src="#" alt="#"></li>
+						<li id="hab4"><img src="#" alt="#"></li>
+						<li id="hab5"><img src="#" alt="#"></li>
+					</ul>
+				</article>
+				<!-- Gastronomía -->
+				<article>
+					<header>
+						<h2 id="gastronomia">Gastronomía</h2>
+					</header>
+					<p>Desayuno</p>
+					<p>Comida</p>
+					<p>Cena</p>
+					<!-- Fotos del restaurante y la comida -->
+					<ul class="slider manual">
+						<li id="com1"><img src="#" alt="#"></li>
+						<li id="com2"><img src="#" alt="#"></li>
+						<li id="com3"><img src="#" alt="#"></li>
+						<li id="com4"><img src="#" alt="#"></li>
+						<li id="com5"><img src="#" alt="#"></li>
+					</ul>
+				</article>
+				<!-- Servicios -->
+				<article>
+					<header>
+						<h2 id="servicios">Servicios</h2>
+					</header>
+					<!-- Nuestras instalaciones -->
+					<article>
+						<header>
+							<h3>Nuestras instalaciones</h3>
+						</header>
+						<ul>
+							<li id="insta1">Instalación 1</li>
+							<li id="insta2">Instalación 2</li>
+							<li id="insta3">Instalación 3</li>
+							<li id="insta4">Instalación 4</li>
+							<li id="insta5">Instalación 5</li>
+						</ul>
+					</article>
+					<!-- Reuniones y eventos -->
+					<article>
+						<header>
+							<h3>Reuniones y eventos</h3>
+						</header>
+						<p>Descripción del salón de reuniones</p>
+					</article>
+					<!-- Actividades -->
+					<article>
+						<header>
+							<h3>Actividades</h3>
+						</header>
+						<ul>
+							<li id="act1">Actividad 1</li>
+							<li id="act2">Actividad 2</li>
+							<li id="act3">Actividad 3</li>
+							<li id="act4">Actividad 4</li>
+							<li id="act5">Actividad 5</li>
+						</ul>
+					</article>
+					<!-- Imágenes de las instalaciones y actividades -->
+					<ul class="slider auto">
+						<li id="img6"><img src="#" alt="#"></li>
+						<li id="img7"><img src="#" alt="#"></li>
+						<li id="img8"><img src="#" alt="#"></li>
+						<li id="img9"><img src="#" alt="#"></li>
+						<li id="img10"><img src="#" alt="#"></li>
+					</ul>
+				</article>
+			</section>
+			<footer>
+				<div>
+					<p>Nombre del Hotel</p>
+					<address>
+						Dirección del hotel<br>
+						Telefóno del hotel<br>
+						<a href="#">Correo del hotel</a>
+					</address>
+				</div>
+				<div>
+					<p>Politica de privacidad<br>
+					Aviso legal</p>
+				</div>
+				<div>
+					<!-- Logos con enlace a redes sociales -->
+					<a href="#"><img src="#" alt="#"></a>
+					<a href="#"><img src="#" alt="#"></a>
+					<a href="#"><img src="#" alt="#"></a>
+				</div>
+			</footer>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 09/12/2020 -->
+<!-- Practica 13 - Semáforo -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 13 - SEMAFORO</title>
+		<script type="text/JavaScript" src="script.js"></script>	
+		<!-- <link rel="stylesheet" href="css/estilo.css"> -->
+		<style>
+			.semaforo{display: inline-block;
+					  margin: 0 30px;}
+			table{border: 2px solid black;}
+			.cabecera{height: 20px;}
+			.th{width: 110px;
+			   padding: 2px 10px;
+			   text-decoration: underline;}
+			td{width: 80px; height: 50px;
+			   border: 2px solid black;
+			   border-radius: 50%;}
+			.peaton{border: 2px solid red;
+					padding: 5px;}
+			img{width: 70px; height: 40px;
+			    padding: 0 30px;}
+			.vacio{width: 40px; height: 50px;
+				   border: 2px solid white;}
+		</style>
+	</head>
+	<body id="body">
+		<header>
+			<p>-- Sonia Antón Llanes --</p>
+			<h2>DWEC - JavaScript T3. Utilización de Objetos</h2>
+			<h1>Práctica 13. SEMÁFORO</h1>
+		</header>
+		
+		<section class="ejercicios">
+			<article>
+				<button onclick="comenzar()">COMENZAR</button>
+			</article>
+			<article class="semaforo">
+				<h3>SEMÁFOROS PARA COCHES</h3>
+				<table>
+					<thead>
+						<th class="th">SEMÁFORO 1 <br><span>C/ Secundaria</span></th>
+						<th class="vacio"></th>
+						<th class="th">SEMÁFORO 2 <br><span>C/ Principal</span></th>
+					</thead>
+					<tr>
+						<td class="cientoveinte"></td>
+						<td class="vacio"></td>
+						<td class="sesenta"></td>
+					</tr>
+					<tr>
+						<td class="uno"></td>
+						<td class="vacio"></td>
+						<td class="uno"></td>
+					</tr>
+					<tr>
+						<td class="sesenta"></td>
+						<td class="vacio"></td>
+						<td class="cientoveinte"></td>
+					</tr>
+				</table>
+			</article>
+			<article class="semaforo">
+				<h3>SEMÁFOROS PARA PEATONES</h3>
+				<table>
+					<thead>
+						<th><span class="th">SEMÁFORO 1</span> <br>C/ Secundaria</th>
+						<th class="vacio"></th>
+						<th><span class="th">SEMÁFORO 2</span> <br>C/ Principal</th>
+					</thead>
+					<tr>
+						<th><span class="peaton" onclick="parar()">PARAR</span></th>
+						<th class="vacio"></th>
+						<th><span class="peaton" onclick="parar()">PARAR</span></th>
+					</tr>
+					<tr>
+						<td class="rojo"><img src="crossing.png" alt="peaton"></td>
+						<td class="vacio"></td>
+						<td class="rojo"><img src="crossing.png" alt="peaton"></td>
+					</tr>
+					<tr>
+						<td class="verde"><img src="crossing.png" alt="peaton"></td>
+						<td class="vacio"></td>
+						<td class="verde"><img src="crossing.png" alt="peaton"></td>
+					</tr>
+				</table>
+			</article>
+			
+		</section>
+	</body>
+</html>

@@ -1,0 +1,5 @@
+for (var ast=1; ast<=(alto*2)-1; ast++){  //asteriscos 
+			//realmente busque el código en internet hasta que encontre uno que funcionase
+			//tiene su logica ya que necesito en cada línea un numero impar de asteriscos: el doble de la línea en la que estoy menos 1
+			// en la línea 1 necesito 1*2-1=1 asterisco
+			// en la línea 2 necesito 2*2-1=3 asteriscos......

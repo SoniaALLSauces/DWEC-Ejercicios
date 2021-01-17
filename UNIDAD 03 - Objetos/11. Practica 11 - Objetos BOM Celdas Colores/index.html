@@ -1,0 +1,135 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 03/12/2020 -->
+<!-- Practica 11 - Objetos BOM -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 11 - Objetos BOM</title>
+		<script type="text/JavaScript" src="script.js"></script>	
+		<!-- <link rel="stylesheet" href="css/estilo.css"> -->
+		<style>
+			h3, h4{color: darkblue;}
+			table{border-collapse: collapse;
+				  margin: 25px;}
+			td{width: 80px; height: 50px;
+			   border: 2px solid black;}
+			section, article{position: relative;}
+			button{width: 300px; height: 40px;
+				   margin: 5px;
+				   border: 2px solid grey;
+				   border-radius: 10px;
+				   line-height: 37px;
+				   text-align: center;
+				   font-weight: bolder;
+				   font-size: .95rem;
+				   background-color: rgb(240,140,140);
+				   position: relative;
+				   left: 5px;}
+			p{position: absolute;
+			  top: -5px;
+			  left: 350px;} 
+			#repetidos, #colores{display: none;}
+			.continua{width: 300px; height: 40px;
+					  margin: 5px;
+					  border: 2px solid grey;
+					  border-radius: 10px;
+					  line-height: 37px;
+					  text-align: center;
+					  font-weight: bolder;
+					  font-size: .95rem;
+					  background-color: rgb(240,140,140);
+					  position: absolute;
+					  top: 0px;
+					  left: 5px;}
+			#disabled{width: 700px; height: 60px;
+					  position: absolute;
+					  top: 70px;
+					  left: 10px;
+					  background: white;
+					  opacity: 0.5}
+		</style>
+	</head>
+	<body id="body">
+		<header>
+			<h4>-- Sonia Antón Llanes --</h4>
+			<h2>DWEC - JavaScript T3. Utilización de Objetos Predefinidos</h2>
+			<h1>Práctica 11 - Objetos BOM</h1>
+		</header>
+		
+		<section class="ejercicios">
+			<article>
+				<h4>Pincha sobre cualquier celda y se pintará de un color aleatorio</h4>
+				<table>
+					<tr>
+						<td class="td" onclick="color(0)"></td>
+						<td class="td" onclick="color(1)"></td>
+						<td class="td" onclick="color(2)"></td>
+						<td class="td" onclick="color(3)"></td>
+					</tr>
+					<tr>
+						<td class="td" onclick="color(4)"></td>
+						<td class="td" onclick="color(5)"></td>
+						<td class="td" onclick="color(6)"></td>
+						<td class="td" onclick="color(7)"></td>
+					</tr>
+				</table>
+			</article>
+		</section>
+		<section>
+			<h4>Pincha los distintos botones para jugar con los colores</h4>
+			<p id="mensaje"></p>  <!-- Parrafo para mostrar los distintos mensajes-->
+			<p id="mensajeColor"></p>  <!-- para mostrar el color sustituto-->
+			<article>
+				<button onclick="pintarFila1()" title="Boton para rellenar las celdas no pintadas de la primera fila, sin repetir colores">Botón para pintar la 1º Fila</button>
+			</article>
+			<article>
+				<button onclick="pintarFila2()" title="Boton para rellenar las celdas no pintadas de la segunda fila, sin repetir colores">Botón para pintar la 2º Fila</button>
+			</article>
+			<article>
+				<button onclick="cambiarColor()" title="Boton para buscar si algun color se repite y elege de que color lo quieres pintar">Cambia el color repetido</button>
+				<div id="repetidos">
+					<p id="repetido"></p>  <!-- Parrafo para indicar que celda tiene color repetido -->
+					<button class="continua" onclick="cambiarColor()">continuar</button>  <!-- Boton para continuar cambiando colores -->
+					<table id="paletaColores">
+						<tr>  <!-- Botones para elegir los distintos colores -->
+							<td onclick="numColor(1)" style="background: yellow;"></td>
+							<td onclick="numColor(2)" style="background: darkorange;"></td>
+							<td onclick="numColor(3)" style="background: hotpink;"></td>
+							<td onclick="numColor(4)" style="background: red;"></td>
+							<td onclick="numColor(5)" style="background: limegreen;"></td>
+							<td onclick="numColor(6)" style="background: darkturquoise;"></td>
+							<td onclick="numColor(7)" style="background: Mediumpurple;"></td>
+							<td onclick="numColor(8)" style="background: chocolate;"></td>
+						</tr>
+						<tr id="disabled"></tr>  <!-- Fila para tapar los botones de color cuando los quiero deshabilitar -->
+					</table>
+				</div>
+			</article>
+			<article>
+				<button onclick="pintaUsuario()" title="Boton para pintar las celdas de los colores que elijas">Pintar</button>
+				<div id="colores">
+					<p id="selectCelda"></p>  <!-- Parrafo para indicar que celda tiene color repetido -->
+					<table>
+						<tr>  <!-- Botones para elegir los distintos colores -->
+							<td onclick="pintaColor(1)" style="background: yellow;"></td>
+							<td onclick="pintaColor(2)" style="background: darkorange;"></td>
+							<td onclick="pintaColor(3)" style="background: hotpink;"></td>
+							<td onclick="pintaColor(4)" style="background: red;"></td>
+							<td onclick="pintaColor(5)" style="background: limegreen;"></td>
+							<td onclick="pintaColor(6)" style="background: darkturquoise;"></td>
+							<td onclick="pintaColor(7)" style="background: Mediumpurple;"></td>
+							<td onclick="pintaColor(8)" style="background: chocolate;"></td>
+						</tr>
+					</table>
+				</div>
+			</article>
+			<article>
+				<button onclick="recargar()" title="Recarga la página">Recargar</button>
+			</article>
+		</section>
+	</body>
+</html>

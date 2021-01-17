@@ -1,0 +1,138 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 17/12/2020 -->
+<!-- Practica 14 - Ascensores -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 14 - Ascensores</title>
+		<script type="text/JavaScript" src="script.js"></script>
+		<style>	
+			table{border: 1px solid black;}
+			td{width: 80px;
+			   border: 1px solid black;
+			   border-radius: 5px;
+			   position: relative;}
+			.paraAscensor{border: none;}
+			.parar{position: absolute;
+				   left: 360px;
+				   top: 257px;}
+			button{display: block;
+				   position: relative;
+				   left: 35%;}
+			.botonIniciar{width: 300px; height: 40px;
+						  margin: 0 0 20px 20px;
+						  border: 2px solid grey;
+						  border-radius: 10px;
+						  line-height: 37px;
+						  text-align: center;
+						  font-weight: bolder;
+						  font-size: .95rem;
+						  background-color: rgb(240,140,140);
+						  left: 10%;}
+		</style>
+	</head>
+	<body>
+		<header>
+			<p>-- Sonia Antón Llanes --</p>
+			<h2>DWEC - JavaScript</h2>
+			<h2>Tema 3. Utilización de Objetos Predefinidos</h2>
+		</header>
+		<section>
+			<header>
+				<h3>Practica 14. Ascensores del Centro Comercial</h3>
+			</header>
+			<button class="botonIniciar" onclick="iniciar()">Iniciar Ascensores</button>
+			<table class="ascensores">
+				<tr>
+					<th>Ascensor 1</th>
+					<th>Ascensor 2</th>
+					<th>Ascensor 3</th>
+					<th>Ascensor 4</th>
+				</tr>
+				<tr>
+					<td class="ascensor1">6</td>
+					<td class="ascensor2">6</td>
+					<td class="ascensor3">6</td>
+					<td class="ascensor4">6</td>
+				</tr>
+				<tr>
+					<td class="ascensor1">5</td>
+					<td class="ascensor2">5</td>
+					<td class="ascensor3">5</td>
+					<td class="ascensor4">5</td>
+				</tr>
+				<tr>
+					<td class="ascensor1">4</td>
+					<td class="ascensor2">4</td>
+					<td class="ascensor3">4</td>
+					<td class="ascensor4">4</td>
+				</tr>
+				<tr>
+					<td class="ascensor1">3</td>
+					<td class="ascensor2">3</td>
+					<td class="ascensor3">3</td>
+					<td class="ascensor4">3</td>
+				</tr>
+				<tr>
+					<td class="ascensor1">2</td>
+					<td class="ascensor2">2</td>
+					<td class="ascensor3">2</td>
+					<td class="ascensor4">2</td>
+				</tr>
+					<td class="ascensor1">1</td>
+					<td class="ascensor2">1</td>
+					<td class="ascensor3">1</td>
+					<td class="ascensor4">1</td>
+				</tr>
+			</table>
+			<table class="parar">
+				<tr><th></th></tr>
+				<tr><td onclick="parar()">PARAR</td></tr>
+				<tr><td onclick="parar()">PARAR</td></tr>
+				<tr><td onclick="parar()">PARAR</td></tr>
+				<tr><td onclick="parar()">PARAR</td></tr>
+				<tr><td onclick="parar()">PARAR</td></tr>
+				<tr><td onclick="parar()">PARAR</td></tr>
+			</table>
+			<table class="botones">
+				<tr>
+					<td>
+						<button onclick="piso(0,1)">6</button>
+						<button onclick="piso(1,1)">5</button>
+						<button onclick="piso(2,1)">4</button>
+						<button onclick="piso(3,1)">3</button>
+						<button onclick="piso(4,1)">2</button>
+						<button onclick="piso(5,1)">1</button>
+					</td>
+					<td>
+						<button onclick="piso(0,2)">6</button>
+						<button onclick="piso(1,2)">5</button>
+						<button onclick="piso(2,2)">4</button>
+						<button onclick="piso(3,2)">3</button>
+						<button onclick="piso(4,2)">2</button>
+						<button onclick="piso(5,2)">1</button>
+					</td>
+					<td>
+						<button onclick="piso(0,3)">6</button>
+						<button onclick="piso(1,3)">5</button>
+						<button onclick="piso(2,3)">4</button>
+						<button onclick="piso(3,3)">3</button>
+						<button onclick="piso(4,3)">2</button>
+						<button onclick="piso(5,3)">1</button>
+					</td>
+					<td>
+						<button onclick="piso(0,4)">6</button>
+						<button onclick="piso(1,4)">5</button>
+						<button onclick="piso(2,4)">4</button>
+						<button onclick="piso(3,4)">3</button>
+						<button onclick="piso(4,4)">2</button>
+						<button onclick="piso(5,4)">1</button>
+					</td>
+			</table>
+		</section>
+	</body>
+</html>

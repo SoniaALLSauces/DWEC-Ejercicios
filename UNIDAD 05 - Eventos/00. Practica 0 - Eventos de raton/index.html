@@ -1,0 +1,70 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 12/01/2021 -->
+<!-- Practica 0 - Eventos de raton -->
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 0 - Eventos del raton</title>
+		<script type="text/JavaScript" src="script.js"></script>
+		<style>
+			.parrafo{margin-left: 10%;}
+		</style>
+	</head>
+	<body>
+		<header>
+			<p>-- Sonia Antón Llanes --</p>
+			<h2>DWEC - JavaScript</h2>
+			<h2>Tema 5. Eventos</h2>
+		</header>
+		<article>
+			<h3>1. Eventos de ratón en botones</h3>
+			<button onclick="pulsaRaton('evento click: has hecho click en el raton')">click</button>
+			<button ondblclick="pintaRojo('button',1)">dbclick</button>
+			<button onmousedown="pulsaRaton(0,'evento mousedown: has pulsado el raton')">mousedown</button>
+			<button onmouseout="salirBoton(0,'Has salido del boton mouseout')">mouseout</button>
+			<button onmouseover="dentroBoton(0,'Te has posicionado dentro del boton mouseover')">mouseover</button>
+			<button onmouseup="sueltaRaton(0,'Soltaste el raton dentro de mouseup')">mouseup</button>
+			<button onmousemove="mueveRaton(0)">mousemove</button>
+			<p class="parrafo"></p>
+		</article>
+		<section>
+			<h3 onclick="pulsaRaton('Este es el ejercicio numero 2')">2. Eventos en elementos del HTML</h3>
+			<article onmousemove="mueveRaton(1)">
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				<p onmouseup="sueltaRaton(1,'Soltaste el raton aqui')">Suelta aqui el click del ratón</p>
+				<p class="parrafo"></p>
+			</article>
+			<section onmousedown="pulsaRaton('trabajamos con eventos')">
+				<article onmouseover="dentroBoton(1,'Te has posicionado dentro del boton mouseover')">Si entramos dentro de este articulo se activa el evento onmouseover</article>
+				<article onmouseout="salirBoton(1,'Has salido del boton mouseout')">Si salimos de este articulo se activa el evento onmouseout</article>
+			</section>
+			<button ondblclick="pintaRojo('article',1)">DobleClick para pintar de rojo el articulo</button>
+		</section>
+		<section>
+			<h3>1. Varios eventos en una mismo párrafo</h3>
+			<p id="pinta">Haz click en este párrafo para verlo en azul y doble click para verlo en verde
+				<br>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+			<p onmouseup="this.style.color='salmon'" onmouseover="this.style.border='1px solid black'">Suelta aqui el raton
+				<br>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+			<p class="parrafo" onmousemove="mueveRaton(2)" onmousedown="pulsaRaton('Pulsaste el raton')">Mueve el raton por el párrafo y/o pulsa el raton
+				<br>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+			<p onmouseover="dentroBoton(3,'El ratón está dentro del párrafo')" onmouseout="salirBoton(3,'El ratón ha salido del último párrafo')">
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+				<p class="parrafo"></p>
+		</section>
+	</body>
+</html>
