@@ -2,24 +2,193 @@
 
 <!-- Sonia Anton Llanes -->
 <!-- Fecha: 13/01/2021 -->
-<!-- Practica 1 - Eventos de raton -->
+<!-- Practica 2 - Eventos de raton -->
 
 
 <html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<title>Practica 1 - Eventos del raton</title>
-		<script type="text/JavaScript" src="script.js"></script>
-		<style>
-			
-		</style>
-	</head>
-	<body>
-		<header>
-			<p>-- Sonia Antón Llanes --</p>
-			<h2>DWEC - JavaScript</h2>
-			<h2>Tema 5. Eventos</h2>
-		</header>
-	</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Practica 1 - Eventos del raton</title>
+        <script type="text/JavaScript" src="script.js"></script>
+        <style>
+            section{width: 1000px;
+                    position: relative;}
+            .cuadro{border: 3px solid black;
+                   height: 40px; line-height: 40px;
+                   padding: 0 20px 40px 20px;
+                   margin-left: 30px;
+                   background: white;
+                   text-aling: center;
+                   font-size: 1.6rem;}
+            button{display: block;
+                    border: 2px solid grey;
+                    border-radius: 10px;
+                    margin: 0 0 10px 70px;
+                    height: 35px;
+                    line-height: 32px;
+                    text-align: center;
+                    font-weight: bolder;
+                    font-size: 1.1em;
+                    background-color: rgb(240,140,140);}
+            .boton{width: 200px;}
+            table{margin-left: 30px;}
+            td{width: 80px; height: 40px;
+               border: 3px solid black;
+               position: relative;}
+            div{position: absolute;
+                z-index: 1;}
+            .parrafo{margin-left: 20px;}
+            article{position: relative;}
+            .flex{display: inline-flex;
+                  flex-direction: row;}
+            span{font-weight: bolder;
+                 text-decoration: underline;}
+            #comenzar{border: none;}
+            #deshabilitarBotones{width: 900px; height: 60px;
+                                 position: absolute;
+                                 top: 80px;
+                                 z-index: 3;}
+            .tablero{width: 800px;
+                     margin: 15px 25px;
+                     padding: 20px;
+                     border: 5px solid SaddleBrown;
+                     background: #FAD7A0;}
+            #amarillo, #verde, .circulo{
+                width: 60px; height: 50px;
+                border-radius: 25px;
+                margin: 1px 5px;
+            }
+            #amarillo{background: yellow;
+                      opacity: 0.5;}
+            #verde{background: limegreen;
+                   opacity: 0.5;}
+            .flecha{border-top: 28px solid red;
+                    opacity: 0.5;
+                    border-right: 54px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-left: 54px solid transparent;}
+            .circulo{background: white;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <p>-- Sonia Antón Llanes --</p>
+            <h2>DWEC - JavaScript</h2>
+            <h2>Tema 5. Eventos</h2>
+        </header>
+        <section><h3>Ejercicio 1: Marca cada vez que se entre en el recuadro</h3>
+            <button class="cuadro" onmouseover="pintaMarca()"></button>
+        </section>
+        <section><h3>Ejercicio 2: Rellenar la tabla con los colores de la tabla contigua</h3>
+                 <p class="parrafo"><span>Click</span> para coger el color y <span>DobleClick</span> para rellenar la tabla vacía</p>
+                 <p class="parrafo">Las dos filas que rellenemos deben ser iguales (con los mismos colores)</p>
+                 <button class="boton" onclick="ponerACero()">Tabla en blanco</button>
+            <article class="flex">
+                <table>
+                    <tr>
+                        <td ondblclick="copioColor(0)"></td>
+                        <td ondblclick="copioColor(1)"></td>
+                        <td ondblclick="copioColor(2)"></td>
+                        <td ondblclick="copioColor(3)"></td>
+                    </tr>
+                    <tr>
+                        <td ondblclick="copioColor(4)"></td>
+                        <td ondblclick="copioColor(5)"></td>
+                        <td ondblclick="copioColor(6)"></td>
+                        <td ondblclick="copioColor(7)"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td onclick="cojoColor(1)" style="background: yellow"><div style="background: yellow"></div></td>
+                        <td onclick="cojoColor(2)" style="background: darkorange"><div  style="background: darkorange"></div></td>
+                        <td onclick="cojoColor(3)" style="background: hotpink"><div style="background: hotpink"></div></td>
+                        <td onclick="cojoColor(4)" style="background: red"><div style="background: red"></div></td>
+                    </tr>
+                    <tr>
+                        <td onclick="cojoColor(5)" style="background: limegreen"><div style="background: limegreen"></div></td>
+                        <td onclick="cojoColor(6)" style="background: darkturquoise"><div style="background: darkturquoise"></div></td>
+                        <td onclick="cojoColor(7)" style="background: chocolate"><div style="background: chocolate"></div></td>
+                        <td onclick="cojoColor(8)" style="background: gray"><div style="background: gray"></div></td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <section><h3>Ejercicio 3: Cuatro en raya</h3>
+            <table>
+                <tr>
+                    <td id="amarillo"></td>
+                    <td id="verde"></td>
+                    <td id="comenzar"><button class="boton" onclick="comenzar()">Comenzar el JUEGO</button></td>
+                </tr>
+            </table>
+			<p id="deshabilitarBotones"></p>
+            <table class="tablero">
+                <tr>
+                    <td class="flecha" onclick="fichaCae(0)"></td>
+                    <td class="flecha" onclick="fichaCae(1)"></td>
+                    <td class="flecha" onclick="fichaCae(2)"></td>
+                    <td class="flecha" onclick="fichaCae(3)"></td>
+                    <td class="flecha" onclick="fichaCae(4)"></td>
+                    <td class="flecha" onclick="fichaCae(5)"></td>
+                    <td class="flecha" onclick="fichaCae(6)"></td>
+                </tr>
+                <tr>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                </tr>
+                <tr>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                </tr>
+                <tr>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                </tr>
+                <tr>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                </tr>
+                <tr>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                </tr>
+                <tr>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                    <td class="circulo"></td>
+                </tr>
+            </table>
+        </section>
+    </body>
 </html>
 	
