@@ -61,8 +61,14 @@
 /* Ejercicio 2 */
     //Variable
         var cadenaTexto= "";
+    function borrarTexto(){
+        if (event.code== "Backspace"){
+            cadenaTexto= cadenaTexto.slice(0,-1);
+        }
+    }
     function sinVocales(){
         document.getElementById("texto").value= cadenaTexto;
+        document.getElementById("texto").onkeydown= borrarTexto;
         if (event.key=="a" || event.key=="e" || event.key=="i" || event.key=="o" || event.key=="u"){
 
         }else{
