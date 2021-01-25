@@ -1,0 +1,122 @@
+<!DOCTYPE html> 
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 22/01/2020 -->
+<!-- Ultima modificación: 11/01/2021 -->
+<!-- Practica 04 - Eventos de teclado  -->
+
+<html lang="es">
+    <head>
+        <title>Practica 04 - Eventos de teclado</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/JavaScript" src="script.js"></script>
+        <style>
+            .flex{display: flex;
+                  flex-direction: row;}
+            form, table{margin-left: 30px;}
+            article:nth-of-type(1){position: relative;
+                                   top: 30px;
+                                   left: 20px;}
+            .left{margin-left: 25px;}
+            button{border:2px solid grey;
+                    border-radius: 5px;
+                    background: rgb(240,140,140);
+                    position: relative;
+                    left: 20px;
+                    height: 25px;
+                    line-height: 22px;
+                    font-size: 1em;}
+            #sonIguales{display: none;
+                        border: 2px solid black;
+                        margin-left: 80px;
+                        width: 30px;
+                        padding: 5px 10px;
+                        font-size: 1.2rem;
+                        font-weight: bolder;}
+            .paso{border: 2px solid black;
+                 padding: 2px 10px;}
+            td{border: 1px solid black;
+               margin: 50px;
+               padding: 3px 16px;}
+            .sinBorde{border: none;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <p>-- Sonia Antón Llanes --</p>
+            <h2>DWEC - JavaScript</h2>
+            <h2>Tema 5. Eventos - Eventos de teclado</h2>
+        </header>
+        <section class="flex">
+            <section><h3>Ejercicio 1. Introducir números de 2 cifras</h3>
+                <form>
+                    <div>
+                        <label for="num1">Número 1:</label>
+                        <input type="text" id="num1" name="num1" onkeydown="dosCifras(0)">
+                    </div>
+                    <div>
+                        <label for="num2">Número 2:</label>
+                        <input type="text" id="num2" name="num2" onkeydown="dosCifras(1)">
+                    </div>
+                    <div>
+                        <label for="num3">Número 3:</label>
+                        <input type="text" id="num3" name="num3" onkeydown="dosCifras(2)">
+                    </div>
+                </form>
+            </section>
+            <section>
+                <article>
+                    <p>Comprueba que los tres números introducidos <strong>son iguales</strong>:</p>
+                    <button onclick="comprobarIgual()">Pulsa para Comprobación</button>
+                    <p id="sonIguales"></p>
+                </article>
+            </section>
+        </section>
+        <section><h3>Ejercicio 2. Introducir texto sin vocales minúsculas</h3>
+            <p class="left">Si se introducen vocales minúsculas desaparecerán.</p>
+            <form>
+                <div>
+                    <label for="texto">Texto:</label>
+                    <input type="text" id="texto" name="texto" size="80" onkeypress="sinVocales()">
+                </div>
+            </form>
+        </section>
+        <section><h3>Ejercicio 3. Password</h3>
+            <p class="left">Password: <span class="paso">PASO</span></p>
+            <form>
+                <div>
+                    <label for="pass">Introduzca Password:</label>
+                    <input type="text" id="pass" name="pass" onkeypress="contrCorrecta()">
+                </div>
+            </form>
+        </section>
+        <section><h3>Ejercicio 4. Mecanografía</h3>
+            <p class="left">Patrón a repetir:</p>
+            <table>
+                <tr>
+                    <td>a</td>
+                    <td>s</td>
+                    <td>d</td>
+                    <td>f</td>
+                    <td class="sinBorde"> </td>
+                    <td>j</td>
+                    <td>k</td>
+                    <td>l</td>
+                    <td>ñ</td>
+                </tr>
+            </table>
+            <form>
+                <input type="text" id="letraa" name="tecla" size="1" onkeypress="letra(0)">
+                <input type="text" id="letras" name="tecla" size="1" onkeypress="letra(1)">
+                <input type="text" id="letrad" name="tecla" size="1" onkeypress="letra(2)">
+                <input type="text" id="letraf" name="tecla" size="1" onkeypress="letra(3)">
+                <input type="text" id="letraj" name="tecla" size="1" onkeypress="letra(4)">
+                <input type="text" id="letrak" name="tecla" size="1" onkeypress="letra(5)">
+                <input type="text" id="letral" name="tecla" size="1" onkeypress="letra(6)">
+                <input type="text" id="letran" name="tecla" size="1" onkeypress="letra(7)">
+            </form>
+        </section>
+        <section><h3></h3></section>
+    </body>
+</html>
