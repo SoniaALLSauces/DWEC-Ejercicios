@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 29/01/2021 -->
+<!-- Practica 7 - Memory  -->
+
+<html lang="es">
+    <head>
+        <title>Practica 07 - Memory </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/JavaScript" src="script.js"></script>
+        <style>
+            section{position: relative;
+                    margin-left: 30px;}
+            button{margin: 10px;
+                   border:1px solid grey;
+                   border-radius: 5px;
+                   background: rgb(240,140,140);
+                   height: 30px;
+                   line-height: 27px;
+                   font-size: 1.1em;}
+            td{width: 150px; height: 180px;
+               border: 4px solid black;
+               text-align: center;
+               vertical-align: middle;
+               font-size: 5rem;}
+            img{width: 100%; height: 100%;
+                text-align: center;
+                vertical-align: middle;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <p>-- Sonia Antón Llanes --</p>
+            <h2>DWEC - JavaScript</h2>
+            <h2>Tema 5. Eventos - Memory </h2>
+        </header>
+        <section>
+            <button onclick="comenzar()">Comenzar Juego</button>
+            <button onclick="mostrarCartas()">Mostrar Cartas</button>
+            <article id="juego"></article>
+            <table>
+                <tr>
+                    <td onclick="levantoCarta(0)"><img src="images/intVerde.jpg" alt="reves"></td>
+                    <td onclick="levantoCarta(1)"><img src="images/intVerde.jpg" alt="reves"></td>
+                    <td onclick="levantoCarta(2)"><img src="images/intVerde.jpg" alt="reves"></td>
+                </tr>
+                <tr>
+                    <td onclick="levantoCarta(3)"><img src="images/intVerde.jpg" alt="reves"></td>
+                    <td onclick="levantoCarta(4)"><img src="images/intVerde.jpg" alt="reves"></td>
+                    <td onclick="levantoCarta(5)"><img src="images/intVerde.jpg" alt="reves"></td>
+                </tr>
+            </table>
+        </section>
+    </body>
+</html>
