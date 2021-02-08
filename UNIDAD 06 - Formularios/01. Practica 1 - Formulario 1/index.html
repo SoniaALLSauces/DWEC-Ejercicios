@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 02/02/2021 -->
+<!-- Practica 01 - Formulario  -->
+
+<html lang="es">
+    <head>
+        <title>Practica 01 - Formulario </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/JavaScript" src="script.js"></script>
+        <style>
+            section{position: relative;
+                    margin: 0 30px;}
+            div{margin: 5px;}
+            div>*{display: inline;}
+            input{border: 1px solid gray;
+                  margin: 2px;}
+            #divBoda, #divDivorcio{display: none;}
+            .boton{width: 150px; height: 35px;
+                    margin: 10px;
+                    border: 2px solid grey;
+                    border-radius: 10px;
+                    font-size: 1rem;
+                    font-weight: bolder;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <h3>-- Sonia Antón Llanes --</h3>
+            <h2>DWEC - JavaScript</h2>
+            <h2>Tema 6 - Formularios</h2>
+        </header>
+        <section>
+            <form action="#" method="post" name="formValidado" onsubmit="return validar()">
+                <fieldset>
+                    <legend>Datos Usuario</legend>
+                    <div>
+                        <label for="lbNombre">Nombre</label>
+                        <input type="text" name="nombre" id="lbNombre" placeholder="nombre" size="15">
+                        <p id="pNombre"></p>
+                    </div>
+                    <div>
+                        <label for="lbApellido1">Primer Apellido</label>
+                        <input type="text" name="apellido1" id="lbApellido1" placeholder="primer apellido" size="15">
+                        <p id="pApellido1"></p>
+                    </div>
+                    <div>
+                        <label for="lbApellido2">Segundo Apellido</label>
+                        <input type="text" name="apellido1" id="lbApellido2" placeholder="segundo apellido" size="15">
+                        <p id="pApellido2"></p>
+                    </div>
+                    <div>
+                        <label for="lbDireccion">Dirección</label>
+                        <input type="text" name="direccion" id="lbDireccion" placeholder="tu direccion" size="15">
+                        <p id="pDireccion"></p>
+                    </div>
+                    <div>
+                        <label for="lbCPostal">Codigo Postal</label>
+                        <input type="text" name="codigoPostal" id="lbCPostal" placeholder="12345" size="15">
+                        <p id="pCPostal"></p>
+                    </div>
+                    <div>
+                        <label for="lbTelfFijo">Telefono fijo</label>
+                        <input type="text" name="telfFijo" id="lbTelfFijo" placeholder="XXX-XXX-XXX" size="15">
+                        <p id="pTelfFijo"></p>
+                    </div>
+                    <div>
+                        <label for="lbTelfMovil">Telefono Movil</label>
+                        <input type="text" name="telfMovil" id="lbTelfMovil" placeholder="XXX-XXX-XXX" size="15">
+                        <p id="pTelfMovil"></p>
+                    </div>
+                    <div>
+                        <label for="lbEstado">Estado Civil</label>
+                        <select name="estadoCivil" id="lbEstado" size="1" onclick="estado()">
+                            <option value="soltero">Soltero</option>
+                            <option value="casado">Casado</option>
+                            <option value="divorciado">Divorciado</option>
+                            <option value="separado">Separado</option>
+                        </select>
+                        <div id="divBoda">
+                            <label for="lbFechaB">Fecha boda:</label>
+                            <input type="date" id="lbFechaB" name="fechaBoda" min="1970-01-01">
+                        </div>
+                        <div id="divDivorcio">
+                            <label for="lbFechaD">Fecha divorcio:</label>
+                            <input type="date" id="lbFechaD" name="fechaDivorcio" min="1970-01-01">
+                        </div>
+                        <p id="pEstado"></p>
+                    </div>
+                    <div>Hijos:
+                        <label for="lbSi">Si</label>
+                        <input type="radio" name="hijos" id="lbSi" value="si">
+                        <label for="lbNo">No</label>
+                        <input type="radio" name="hijos" id="lbNo" value="no">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+			<input type="checkbox" name="avisoLegal" id="lbAviso" value="si">     
+                        <label for="lbAviso">Aviso Legal*</label>
+                        <p id="pAviso"></p>
+                    </div>	
+                </fieldset>
+                <input  class="boton" type="submit" value="Enviar">
+                <input  class="boton" type="reset" value="Limpiar Campos">
+            </form>
+        </section>
+    </body>
+</html>

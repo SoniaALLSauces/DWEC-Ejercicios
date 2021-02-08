@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 02/02/2021 -->
+<!-- Practica 00 - Formulario  -->
+
+<html lang="es">
+    <head>
+        <title>Practica 00 - Formulario </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/JavaScript" src="script.js"></script>
+        <style>
+            section{position: relative;
+                    margin: 0 30px;}
+            div{margin: 5px;}
+            div>*{display: inline;}
+            input{border: 1px solid gray;
+                  margin: 2px;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <h3>-- Sonia Antón Llanes --</h3>
+            <h2>DWEC - JavaScript</h2>
+            <h2>Tema 6 - Formularios</h2>
+        </header>
+        <section>
+            <form action="#" method="post" name="formValidado" onsubmit="return validar()">
+            <fieldset>
+                <legend>Datos Usuario</legend>
+                <div>
+                    <label for="lbExpediente">Nº Expediente</label>
+                    <input type="text" name="expediente" id="lbExpediente" placeholder="numero de expediente" size="15" onblur="validarExpte()">
+                    <p id="pExpediente"></p>
+                </div>
+                <div>
+                    <label for="lbNombre">Nombre*</label>
+                    <input type="text" name="nombre" id="lbNombre" placeholder="nombre" size="15">
+                    <p id="pNombre"></p>
+                </div>
+                <div>
+                    <label for="lbApellido1">Primer Apellido*</label>
+                    <input type="text" name="apellido1" id="lbApellido1" placeholder="primer apellido" size="15">
+                    <p id="pApellido1"></p>
+                </div>
+                <div>
+                    <label for="lbApellido2">Segundo Apellido</label>
+                    <input type="text" name="apellido1" id="lbApellido2" placeholder="segundo apellido" size="15">
+                    <p id="pApellido2"></p>
+                </div>
+                <div>
+                    <label for="lbNacimiento">Fecha de Nacimiento</label>
+                    <input type="text" name="fechaNac" id="lbNacimiento" placeholder="DD/MM/AAAA" size="12">
+                    <p id="pNacimiento"></p>
+                </div>
+                <div>
+                    <label for="lbEdad">Edad*</label>
+                    <input type="text" name="edad" id="lbEdad" placeholder="edad" size="15">
+                    <p id="pEdad"></p>
+                </div>
+                <div>
+                    <label for="lbTelefono">Telefono*</label>
+                    <input type="text" name="telefono" id="lbTelefono" placeholder="XXX-XXX-XXX" size="15">
+                    <p id="pTelefono"></p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Aficiones</legend>
+                <div>
+                    <label for="lbAficion1">Afición:</label>
+                    <input type="text" name="aficion1" id="lbAficion1" placeholder="aficion" size="15">
+                    <p id="pAficion1"></p>
+                </div>
+                <div>
+                    <label for="lbAficion2">Afición:</label>
+                    <input type="text" name="aficion2" id="lbAficion2" placeholder="aficion" size="15">
+                    <p id="pAficion2"></p>
+                </div>
+            </fieldset>
+            <div id="oculto"></div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar Campos">
+        </section>
+    </body>
+</html>

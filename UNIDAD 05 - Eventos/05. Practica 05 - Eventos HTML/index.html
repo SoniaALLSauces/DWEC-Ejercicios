@@ -1,0 +1,70 @@
+<!DOCTYPE>
+
+<!-- Sonia Anton Llanes -->
+<!-- Fecha: 26/01/2021 -->
+<!-- Practica 5 - Eventos HTML -->
+
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Practica 5 - Eventos HTML</title>
+        <script type="text/JavaScript" src="script.js"></script>
+        <style>
+            section{margin-left: 20px;}
+            img{display: inline;
+                width: 20%;
+                border: 4px solid red;}
+            p{border: 2px solid blue;
+              margin: 10px 50px;}
+            section>p{border: none;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <h4>-- Sonia Antón Llanes --</h4>
+            <h2>DWEC - JavaScript</h2>
+            <h2>Tema 5. Eventos - Eventos HTML</h2>
+        </header>
+        <section><h3>Ejercicio 1: Imágenes que se intercambian</h3>
+            <img src="" alt="imagen" onclick="cambiaImagen(0)" onmouseover="bordeNegro(0)" onmouseout="bordeRojo(0)">
+            <img src="" alt="imagen" onclick="cambiaImagen(1)" onmouseover="bordeNegro(1)" onmouseout="bordeRojo(1)">
+            <img src="" alt="imagen" onclick="cambiaImagen(2)" onmouseover="bordeNegro(2)" onmouseout="bordeRojo(2)">
+            <img src="" alt="imagen" onclick="cambiaImagen(3)" onmouseover="bordeNegro(3)" onmouseout="bordeRojo(3)">
+        </section>
+        <section><h3>Ejercicio 2: Escribir y Seleccionar texto</h3>
+            <form>
+                <div>
+                    <label for="lbtexto">Introduce un texto</label>
+                    <input type="text" id="lbTexto" name="texto" size="80" onkeypress="datosTecla()" onselect="aviso(0)"
+                            onchange="cambio(0)">
+                    <p id="texto">Carácter y Code correspondiente del texto introducido:</p>
+                </div>
+                <div>
+                    <label for="lbArea">Introduce un texto</label>
+                    <textarea id="lbArea" name="textoArea" rows="2" cols="80" onkeypress="datosTeclaArea()" onselect="aviso(1)"
+                            onchange="cambio(1)"></textarea>
+                    <p id="textoArea">Carácter y Code correspondiente del texto introducido:</p>
+                </div>
+            </form>
+        </section>
+        <section><h3>Ejercicio 3: Texto con foco minúsculas, sin foco mayúsculas</h3>
+            <form>
+                <div>
+                    <label for="lbtextoMinMay">Introduce un texto</label>
+                    <input type="text" id="lbtextoMinMay" name="texto" size="80" onfocus="minusculas()" onblur="mayusculas()">
+                </div>
+            </form>
+        </section>
+        <section><h3>Ejercicio 5: Texto cambia de color</h3>
+            <p onmouseover="colorVerde(2)" onmouseout="colorNegro(2)">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum."
+            </p>
+        </section>
+    </body>
+</html>
+	
